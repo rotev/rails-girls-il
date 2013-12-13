@@ -1,0 +1,29 @@
+---
+step: create-app
+part: server
+title: Run the Rails server
+---
+
+
+You can then start the rails server by running:
+
+<% code("sh") do %>ruby bin\rails server<% end %>
+
+**Windows users:** You may need to replace `bin\rails` with `script\rails`, depending on the version of Rails you have installed.
+
+Open [http://localhost:3000](http://localhost:3000) in your browser. You should see "Welcome aboard" page, which means that the generation of your new app worked correctly.
+
+Notice in this window the command prompt is not visible because you are now in the Rails server, the command prompt looks like this:
+
+<div class="os-specific">
+  <div class="nix">
+<% code("sh") do %>$<% end %>
+  </div>
+  <div class="win">
+<% code("sh") do %> ><% end %>
+  </div>
+</div>
+
+When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
+
+Hit `CTRL-C` in the terminal to quit the server.

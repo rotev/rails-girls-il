@@ -1,0 +1,37 @@
+---
+step: design
+part: bootstrap
+title: Add Bootstrap
+---
+
+
+
+The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
+
+Open `app/views/layouts/application.html.erb` in your text editor and above the line
+
+<% code("erb") do %>
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<% end %>
+
+add
+
+<% code("erb") do %>
+<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css"><% end %>
+
+and replace
+
+<% code("erb") do %>
+&lt;%= yield %&gt;
+<% end %>
+
+with
+
+<% code("erb") do %>
+<div class="container">
+  &lt;%= yield %&gt;
+</div>
+<% end %>
+
+
+

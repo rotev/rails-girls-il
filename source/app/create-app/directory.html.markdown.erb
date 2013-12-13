@@ -1,0 +1,31 @@
+---
+step: create-app
+part: directory
+title: Create a directory for our app
+---
+
+
+First, let's open a terminal:
+
+* Mac OS X: Open Spotlight, type *Terminal* and click the *Terminal* application.
+* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby on Rails*.
+* Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
+
+
+Next, type these commands in the terminal:
+
+<div class="os-specific">
+  <div class="nix">
+    <% code("sh") do %>mkdir projects<% end %>
+
+    <p>
+You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:
+    </p>
+
+<% code("sh") do %>cd projects<% end %>
+
+    <p>
+You can verify you are now in an empty directory or folder by again running the <code>ls</code> command.
+    </p>
+  </div>
+</div>

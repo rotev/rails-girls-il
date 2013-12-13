@@ -1,0 +1,15 @@
+- guide = "app"
+
+#steps
+  %ul
+    - data.app.steps.each do |step|
+      %li{ class: "#{data.page.step == step[0] ? 'active' : ''}"}
+        - link = step[1].parts ? "#{step[0]}/#{step[1].parts.first[0]}" : step[0]
+        = link_to step[1].title, "/#{guide}/#{link}.html"
+
+        - if step[1].parts
+          - parts = step[1].parts
+          %ul
+            - parts.each do |part|
+              %li{ class: "#{data.page.part == part[0] ? 'active' : ''}"}
+                = link_to part[1].title, "/#{guide}/#{step[0]}/#{part[0]}.html"

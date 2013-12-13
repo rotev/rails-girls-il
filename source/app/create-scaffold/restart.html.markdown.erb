@@ -1,0 +1,16 @@
+---
+step: create-scaffold
+part: restart
+title: Restart the server
+---
+
+The scaffold creates new files in your project directory, but to get it to work properly we need to run a couple of other commands to update our database and restart the server.
+
+<% code("sh") do %>
+rake db:migrate
+rails server<% end %>
+
+
+Open [http://localhost:3000/ideas](http://localhost:3000/ideas) in your browser. Click around and test what you got by running these few command-line commands.
+
+Hit `CTRL-C` to quit the server again when you've clicked around a little.

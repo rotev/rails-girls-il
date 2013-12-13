@@ -1,0 +1,47 @@
+steps:
+  introduction:
+    title: Introduction
+
+  tools:
+    title: Get to know the tools
+    parts:
+      text-editor:
+        title: Text editor
+      terminal:
+        title: Terminal
+      web-browser: 
+        title: Web browser
+
+  create-app:
+    title: Create the app
+    parts:
+      directory: 
+        title: Create a directory
+      app:
+        title: Create a Rails app
+      server:
+        title: Run the Rails server
+      review:
+        title: Review the code
+
+  create-scaffold:
+    title: Create Idea scaffold
+    parts:
+      scaffold: 
+        title: Create the scaffold
+      migrate:
+        title: Migrate the database
+      restart:
+        title: Restart the Rails server
+      review:
+        title: Review the code
+
+  design:
+    title: Design
+    parts:
+      bootstrap:
+        title: Add Bootstrap
+      nav_and_footer:
+        title: Add a nav bar and a footer
+      css:
+        title: Refine with some CSS
