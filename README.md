@@ -1,17 +1,13 @@
-# Middleman Template: ZURB Foundation #
+# Rails Girls Israel Website in the making!
 
-Middleman-Foundation is a [Middleman 3.x](http://middlemanapp.com/) project template the [SCSS](http://sass-lang.com/) version of [ZURB Foundation](http://foundation.zurb.com/).  This template no longer requires compass as it uses the Foundation standalone SCSS branch as an upstream.  This should help streamline development a little bit.  You can easily add Compass to your project if you desire and if you really want the Compass Foundation gem in your Middleman project, you don't need a template.  Simply add it to your gemfile and follow the instructions.
+Currently only contains the new app guide in progress.
 
-This project template has been updated to support Foundation 4.
+## Install and run
+```
+bundle
+middleman s
+```
 
-## Installation ##
-
-Clone into ~/.middleman (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`.
-
-1. $ `git clone git://github.com/vocino/middleman-foundation.git ~/.middleman/foundation`
-2. $ `middleman init my_new_project --template=foundation`
-
-For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/) or feel free to hit me up on [Twitter](http://twitter.com/vocino).
 
 ## ZURB Foundation License ##
 
