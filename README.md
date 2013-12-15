@@ -8,6 +8,8 @@ bundle
 middleman s
 ```
 
+and go to http://localhost:4567/app/introduction.html
+
 
 ## ZURB Foundation License ##
 
