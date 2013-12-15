@@ -24,6 +24,12 @@ body {
   line-height: 150%;
 }
 
+
+.smiley {
+  display: inline-block;
+  font-weight: bold;
+}
+
 #steps {
   float: left;
   position: fixed;
@@ -156,7 +162,24 @@ body {
     }
   }
 
+  p {
+    a {
+      text-decoration: underline;
+      display: inline-block; padding: 0 4px;
+      margin: 0 -1px;
+
+      &:hover {
+        background: #20B3C9;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
   img {
     margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 4px;
+    @include box-shadow(1px 1px 3px rgba(black, 0.1));
   }
 } // tools

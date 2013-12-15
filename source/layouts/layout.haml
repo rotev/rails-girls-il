@@ -39,14 +39,14 @@
     
     = partial(:steps)
  
-    #content
+    #content.clearfix
       %section{ id: data.page.part || data.page.step }
         %header
           %h1= data.page.title
 
         = yield
 
-        - if next_link
-          = link_to "continue", "/#{guide}/#{next_link}", class: 'button right', id: 'continue'
+      - if next_link
+        = link_to "continue", "/#{guide}/#{next_link}", class: 'button right', id: 'continue'
 
     = javascript_include_tag  "app"
