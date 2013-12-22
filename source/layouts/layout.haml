@@ -35,12 +35,10 @@
     %link{href: "http://fonts.googleapis.com/css?family=Cabin:400,600,700", rel: "stylesheet", type: "text/css"}/
     = stylesheet_link_tag "normalize", "foundation", "app"
 
-    - if I18n.locale == :he
+    - if t(:direction) == 'rtl'
       = stylesheet_link_tag "app-rtl"
-    - else
-      = stylesheet_link_tag "app-ltr"
 
-      
+
   %body{class: page_classes}
 
     

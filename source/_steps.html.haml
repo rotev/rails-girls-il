@@ -12,4 +12,4 @@
           %ul
             - parts.each do |part|
               %li{ class: "#{data.page.part == part[0] ? 'active' : ''}"}
-                = link_to part[1].title, "/#{guide}/#{step[0]}/#{part[0]}.html"
+                = link_to t(part[0], default: part[1].title), "/#{guide}/#{step[0]}/#{part[0]}.html"

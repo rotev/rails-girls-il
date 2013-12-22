@@ -1,8 +1,26 @@
 he:
   hello: שלום
+  direction: rtl
 
   introduction: הקדמה
   tools: הכירי את הכלים
   create-app: צרי את האפליקצייה
   create-scaffold: צרי את שלד הרעיון
   design: עצבי את האפליקצייה
+
+  text-editor: עורך טקסט
+  terminal: טרמינל
+  web-browser: דפדפן
+
+  directory: צרי תיקייה
+  app: צרי אפליקציית Rails
+  server: הריצי את שרת ה-Rails
+  review: סקרי את הקוד
+
+  scaffold: צרי את השלד
+  migrate: בצעי מיגרציה לבסיס הנתונים
+  restart: אתחלי את שרת ה-Rails
+
+  bootstrap: הוסיפי את ספריית Bootstrap
+  nav_and_footer: הוסיפי תפריט ניווט ו-footer
+  css: עדני את העיצוב עם קצת CSS

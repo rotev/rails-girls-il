@@ -1,9 +1,21 @@
+@import 'compass';
+
 body {
   direction: rtl;
 }
 
 #steps > ul > li > a:before {
   margin: 0 0 0 10px;
+}
+
+#steps > ul > li > ul > li > a {
+  padding: 5px 36px 5px 10px;
+}
+
+#steps > ul > li > ul > li.active a:before {
+  margin-right: -19px;
+  margin-left: 4px;
+  @include rotateY(180deg);
 }
 
 #content {
