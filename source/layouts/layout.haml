@@ -32,7 +32,13 @@
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title= "#{data.page.title} — Rails Girls App Tutorial"
-    %link{href: "http://fonts.googleapis.com/css?family=Cabin:400,600,700", rel: "stylesheet", type: "text/css"}/
+
+    - if I18n.locale == :he
+      = stylesheet_link_tag "http://fast.fonts.net/cssapi/205bde8e-967a-46e0-8556-5ab61ef9fafb.css"
+    - else
+      = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
+
+      
     = stylesheet_link_tag "normalize", "foundation", "app"
 
     - if t(:direction) == 'rtl'
@@ -60,6 +66,6 @@
 
       - if next_link
         - locale = I18n.locale == :he ? '' : "/#{I18n.locale}"
-        = link_to "continue", "#{locale}/#{guide}/#{next_link}", class: 'button right', id: 'continue'
+        = link_to t(:continue, default: "continue"), "#{locale}/#{guide}/#{next_link}", class: 'button right', id: 'continue'
 
     = javascript_include_tag  "app"

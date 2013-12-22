@@ -2,6 +2,10 @@
 
 body {
   direction: rtl;
+  font-family: 'Classica W26 Bold';
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Classica W26 Bold';  
 }
 
 #steps > ul > li > a:before {
@@ -33,4 +37,12 @@ body {
       }
     }
   }
+}
+
+pre {
+  direction: ltr;
+}
+
+.right {
+  float: left !important;
 }
