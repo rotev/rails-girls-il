@@ -19,13 +19,6 @@ platforms :mri_18 do
   gem "ruby18_source_location"
 end
 
-# blog
-gem "builder"
-gem "redcarpet"
-gem "middleman-blog"
-# gem "middleman-blog", :github => "middleman/middleman-blog"
-gem 'nokogiri'
-
 # to sync to s3
 # gem "middleman-sync", "~> 3.0.11"
 gem 'middleman-s3_sync'
