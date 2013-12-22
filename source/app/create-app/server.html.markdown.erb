@@ -4,26 +4,29 @@ part: server
 title: Run the Rails server
 ---
 
+The Rails server is responsible for reading the contents of the files in our <code>railsgirls</code> folder and creating an app out of it. Let's start the Rails server to see the website that we've just created. You can then start the rails server by running:
 
-You can then start the rails server by running:
+<% code("sh") do %>rails server<% end %>
 
-<% code("sh") do %>ruby bin\rails server<% end %>
+Open [http://localhost:3000](http://localhost:3000) in your browser. You should see "Welcome aboard" page, which means that the generation of your new app worked correctly:
 
-**Windows users:** You may need to replace `bin\rails` with `script\rails`, depending on the version of Rails you have installed.
+<%=image_tag 'app/app/initial-app.png' %>
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. You should see "Welcome aboard" page, which means that the generation of your new app worked correctly.
-
-Notice in this window the command prompt is not visible because you are now in the Rails server, the command prompt looks like this:
+Notice that the command prompt is no longer visible in the terminal window because you are now running the Rails server. The command prompt looks like this:
 
 <div class="os-specific">
   <div class="nix">
 <% code("sh") do %>$<% end %>
   </div>
   <div class="win">
-<% code("sh") do %> ><% end %>
+<% code("text") do %>C:\Sites\projects\railsgirls><% end %>
   </div>
 </div>
 
 When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
 
 Hit `CTRL-C` in the terminal to quit the server.
+
+Notice that after you quit the server, if you try to refresh the browser, it will not work. This is because the Rails server is responsible for creating the actual app.
+
+<%=image_tag 'app/app/server-down.png' %>
