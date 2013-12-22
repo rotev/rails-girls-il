@@ -31,7 +31,7 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    %title= "#{data.page.title} ^^ Rails Girls App Tutorial"
+    %title= "#{data.page.title} — Rails Girls App Tutorial"
     %link{href: "http://fonts.googleapis.com/css?family=Cabin:400,600,700", rel: "stylesheet", type: "text/css"}/
     = stylesheet_link_tag "normalize", "foundation", "app"
   %body{class: page_classes}
@@ -43,6 +43,13 @@
       %section{ id: data.page.part || data.page.step }
         %header
           %h1= data.page.title
+
+          #os-selector
+            %select
+              %option{value: 'windows'} Windows
+              %option{value: 'nix'} Linux
+              %option{value: 'osx'} OS X
+
 
         = yield
 
