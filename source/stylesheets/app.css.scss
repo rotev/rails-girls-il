@@ -141,6 +141,32 @@ body.os-osx .osx { display: inline-block; }
       &.active ul { display: block; }
     }
   }
+
+  .language-selector {
+    margin-top: 30px;
+    margin-left: 30px;
+    a {
+      display: inline-block;
+      border: 1px solid #fff;
+      @include opacity(0.5);
+      padding: 0 5px;
+
+      &.active {
+        @include opacity(0.8);        
+      }
+
+      &:hover {
+        @include opacity(1);
+      }
+    }
+    a:first-child {
+
+    }
+    a:nth-child(2) {
+
+    }
+  }
+
 } // steps
 
 

@@ -1,3 +1,28 @@
 en:
   hello: hello
-  
+  direction: ltr
+
+  introduction: Introduction
+  tools: Get to know the tools
+  create-app: Create the app
+  create-scaffold: Create Idea scaffold
+  design: Design
+
+  text-editor: Text editor
+  terminal: Terminal
+  web-browser: Web browser
+
+  directory: Create a directory
+  app: Create a Rails app
+  server: Run the Rails server
+  review: Review the code
+
+  scaffold: Create the scaffold
+  migrate: Migrate the database
+  restart: Restart the Rails server
+
+  bootstrap: Add Bootstrap
+  nav_and_footer: Add a nav bar and a footer
+  css: Refine with some CSS
+
+  continue: continue

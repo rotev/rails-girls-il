@@ -13,3 +13,17 @@
             - parts.each do |part|
               %li{ class: "#{data.page.part == part[0] ? 'active' : ''}"}
                 = link_to t(part[0], default: part[1].title), "/#{guide}/#{step[0]}/#{part[0]}.html"
+
+
+  .language-selector
+    -# In the future this should be replaced with a generalised solution
+    - if I18n.locale == :en
+      - hebrew_url = "/#{current_page.path.gsub('en/app', 'app')}"
+      - english_url = "/#{current_page.path}"
+    - else
+      - hebrew_url = "/#{current_page.path}"
+      - english_url = "/en/#{current_page.path}"
+
+
+    = link_to 'עב', hebrew_url, class: I18n.locale == :he ? 'active' : ''
+    = link_to 'en', english_url, class: I18n.locale == :en ? 'active' : ''

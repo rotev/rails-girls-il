@@ -25,7 +25,6 @@
         - if part[0] == data.page.part
           - current_part = part
 
-
 !!!
 %html.no-js{lang: "en"}
   %head
@@ -38,7 +37,7 @@
     - else
       = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
 
-      
+
     = stylesheet_link_tag "normalize", "foundation", "app"
 
     - if t(:direction) == 'rtl'
