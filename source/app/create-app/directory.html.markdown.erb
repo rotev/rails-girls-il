@@ -7,25 +7,50 @@ title: Create a directory for our app
 
 First, let's open a terminal:
 
-* Mac OS X: Open Spotlight, type *Terminal* and click the *Terminal* application.
-* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby on Rails*.
-* Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
-
-
-Next, type these commands in the terminal:
-
 <div class="os-specific">
   <div class="nix">
-    <% code("sh") do %>mkdir projects<% end %>
-
-    <p>
-You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:
-    </p>
-
-<% code("sh") do %>cd projects<% end %>
-
-    <p>
-You can verify you are now in an empty directory or folder by again running the <code>ls</code> command.
-    </p>
+    <p>Search for <em>Terminal</em> on the dash and click <em>Terminal</em>.</p>
+  </div>
+  <div class="osx">
+    <p>Open Spotlight, type <em>Terminal</em> and click the <em>Terminal</em> application.</p>
+  </div>
+  <div class="windows">    
+    <p>Click Start and look for <em>Command Prompt</em>, then click <em>Command Prompt with Ruby and Rails</em>.</p>
+    <%= image_tag 'app/tools/command-open-windows.png' %>
   </div>
 </div>
+
+
+A black window will open. This is called a <em>Terminal</em>, or <em>Command Prompt</em>.
+<div class="os-specific">
+  <div class="windows">
+    <%=image_tag 'app/tools/command-windows.png' %>
+  </div>
+</div>
+
+Now type the following command in the terminal, and then hit <em>Enter</em>.
+<% code("sh") do %>mkdir projects<% end %>
+
+This command will create a new directory on your computer named <code>projects</code>.
+
+<div class="os-specific">
+  <div class="nix osx">
+    <p>
+      You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output, like this:
+    </p>
+  </div>
+  <div class="windows">
+    <p>
+You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. 
+<%=image_tag 'app/app/dir1.png' %>
+    </p>  
+  </div>
+</div>
+
+
+Now you want to change the directory you are currently in to the <code>projects</code> folder by running:
+<% code("sh") do %>cd projects<% end %>
+
+
+You can verify you are now in an empty directory or folder by again running the <code class="nix osx">ls</code><code class="windows">dir</code> command again.
+<%=image_tag 'app/app/dir2.png', class: 'windows' %>

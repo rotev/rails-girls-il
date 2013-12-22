@@ -1,0 +1,21 @@
+---
+step: design
+part: nav_and_footer
+title: Add a nav bar and a footer
+---
+
+
+Let's also add a navigation bar and footer to the layout. In the same file, under `<body>` add
+
+
+= preserve do 
+  - code("erb") do
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{href: "/"} The Idea app
+          %ul.nav
+            %li.active
+              %a{href: "/ideas"} Ideas
+
+and before `</body>`.

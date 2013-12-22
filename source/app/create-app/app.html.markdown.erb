@@ -4,18 +4,18 @@ part: app
 title: Create a Rails app
 ---
 
-<p>
-  Now you want to create a new app called <code>railsgirls</code> by running:
-</p>
+Now you want to create a new app called <code>railsgirls</code> by running:
 
 <% code("sh") do %>rails new railsgirls<% end %>
 
-<p>
-  This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:
-</p>
+It will take a minute or so, and after that you'll see something like this:
+
+<%=image_tag 'app/app/create-app.png', class: 'windows' %>
+
+This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:
 
 <% code("sh") do %>cd railsgirls<% end %>
 
-<p>
-  If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>.
-</p>
+If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. The <code>rails new</code> command automatically created all these folders and files for us.
+
+<%=image_tag 'app/app/app-dir.png', class: 'windows' %>
