@@ -6,7 +6,7 @@ gem "slim"
 
 gem "bourbon", :require => false
 
-gem "middleman", "~>3.1.4"
+gem "middleman", :git => "git@github.com:paulcpederson/middleman.git"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

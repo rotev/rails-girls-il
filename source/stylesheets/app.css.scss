@@ -22,6 +22,7 @@ body {
   font-family: 'Cabin', sans-serif;
   height: 100%;
   line-height: 150%;
+  overflow-y: scroll;
 }
 
 // os-specific
@@ -186,7 +187,14 @@ body.scrolled #content header {
     }
   }
 
-  p {
+  p, div, pre {    
+    max-width: 1000px;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  p {    
     a {
       text-decoration: underline;
       display: inline-block; padding: 0 4px;

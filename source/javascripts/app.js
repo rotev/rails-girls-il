@@ -4,7 +4,7 @@
 $(document).ready(function(){
   var next_url = $('#continue').attr('href');
 
-  init_navigation_keys();
+  //init_navigation_keys();
   init_os_selector();
   init_header_shadow();
 });

@@ -1,11 +1,11 @@
 - guide = "app"
-
 #steps
   %ul
+    -# I18n.t(:steps).each do |step|
     - data.app.steps.each do |step|
       %li{ class: "#{data.page.step == step[0] ? 'active' : ''}"}
         - link = step[1].parts ? "#{step[0]}/#{step[1].parts.first[0]}" : step[0]
-        = link_to step[1].title, "/#{guide}/#{link}.html"
+        = link_to t(step[0], default: step[1].title), "/#{guide}/#{link}.html"
 
         - if step[1].parts
           - parts = step[1].parts

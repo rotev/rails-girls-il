@@ -55,9 +55,13 @@ set :markdown_engine, :maruku
 
 activate :syntax
 
+activate :i18n, mount_at_root: :he
 
 # Build-specific configuration
 configure :build do
+
+  activate :i18n, langs: [:he, :en]
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
