@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5 {
   margin-left: 4px;
   @include rotateY(180deg);
 }
+.language-selector {
+  margin-left: 0; 
+  margin-right: 12px;
+}
 
 #content {
   margin-left: 0; 
