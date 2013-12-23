@@ -1,0 +1,23 @@
+---
+guide: app
+step: static
+title: הוסיפי עמודים סטטיים לאפליקציה שלך
+---
+
+בואי נוסיף עמודים סטטיים לאפליקציה שלנו שיכילו מידע על יוצרת האפליקציה - את!
+
+= preserve do
+  - code('sh') do
+    rails generate controller pages info
+
+הפקודה הזאת תיצור תיקיה חדשה תחת `/views` שנקראת `/pages` ומתחת לזה קובץ שנקרא `info.html.erb` שהוא יהיה עמוד המידע שלך.
+
+זה מוסיף גם route פשוט חדש ל-routes.rb.
+
+
+= preserve do
+  - code('ruby') do
+    get "pages/info"
+
+כעת את יכולה לפתוח את הקובץ `/views/pages/info.html.erb` ולהוסיף מידע אודותיך ב-HTML ואז לגלוש לכתובת [http://localhost:3000/pages/info](http://localhost:3000/pages/info) בדפדפן שלך כדי לראות את עמוד המידע החדש שלך.
+

@@ -1,0 +1,19 @@
+---
+guide: app
+step: routes
+title: שינויים קטנים ב-Routes
+---
+
+אם תנסי לגלוש ל-[http://localhost:3000](http://localhost:3000) זה יציג לך את מסך ה-"Welcome aboard". בואי נגרום לו להציג את רשימת הרעיונות.
+
+פתחי את הקובץ `config/routes.rb` ואחרי השורה הראשונה הוסיפי
+
+= preserve do
+  - code('ruby') do
+    root :to => redirect('/ideas')
+
+%p בדקי את השינוי ע"י גלישה לכתובת הראשית בדפדפן שלך.
+
+**מדריך/ה:** דבר/י על routes, כולל פרטים על סדר ה-routes והקשר שלהם לקבצים סטטיים.
+%br
+***משתמשות Rails 3:*** תצטרכו למחוק את הקובץ index.html מתיקיית ה-`/public/` כדי שזה יעבוד.

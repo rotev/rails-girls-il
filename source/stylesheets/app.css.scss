@@ -195,7 +195,7 @@ body.scrolled #content header {
       @include transition(box-shadow 0.2s);
 
       h1 {
-        display: inline-block;
+        float: left;
       }
       a {
         float: right; margin-right: 45px; margin-top: 5px;

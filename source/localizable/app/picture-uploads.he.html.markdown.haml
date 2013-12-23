@@ -1,0 +1,83 @@
+---
+guide: app
+step: picture-uploads
+title: הוספת אפשרות להעלאת תמונות
+---
+
+אנחנו נצטרך להתקין חתיכת תוכנה שתאפשר לנו להעלות קבצים ב-Rails.
+
+פתחי את הקובץ `Gemfile` בתיקיית הפרוייקט באמצעות עורך הטקסט ומתחת לשורה
+
+= preserve do 
+  - code("ruby") do
+    gem 'sqlite3'
+
+הוסיפי
+
+= preserve do 
+  - code("ruby") do
+    gem 'carrierwave'
+
+**מדריך/ה:** הסבר/הסבירי מהן ספריות וכיצד הן מועילות. תאר/י מהי תוכנת קוד פתוח.
+
+בטרמינל הריצי:
+
+= preserve do 
+  - code("sh") do
+    bundle
+
+כעת אנחנו יכולים לג'נרט את הקוד שמטפל בהעלאות. בטרמינל הריצי:
+
+= preserve do 
+  - code("sh") do
+    rails generate uploader Picture
+
+בשלב זה עליך **לאתחל את שרת ה-Rails** בטרמינל. 
+
+לחצי על `CTRL-C` בטרמינל כדי לכבות את השרת. ברגע שהוא הפסיק, את יכולה ללחוץ על חץ למעלה כדי לקבל את הפקודה האחרונה שהכנסת, ואז ללחוץ enter כדי להפעיל את השרת שוב.
+
+זה נחוץ על מנת שהאפליקציה תטען את הספרייה שהתווספה.
+
+פתחי את הקובץ `app/models/idea.rb` ומתחת לשורה
+
+= preserve do 
+  - code("ruby") do
+    class Idea < ActiveRecord::Base
+
+הוסיפי 
+
+= preserve do 
+  - code("ruby") do
+    mount_uploader :picture, PictureUploader
+
+פתחי את הקובץ `app/views/ideas/_form.html.erb` ושני את 
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_field :picture %>
+
+ל- 
+
+
+= preserve do 
+  - code("erb") do
+    <%= f.file_field :picture %>
+
+בדפדפן שלך, הוסיפי רעיון חדש עם תמונה. כשאת מעלה תמונה היא לא נראית כל כך טוב כי היא מציגה רק את הנתיב אל קובץ התמונה, אז בואי נתקן זאת.
+
+פתחי את הקובץ `app/views/ideas/show.html.erb` ושני את 
+
+
+= preserve do 
+  - code("erb") do
+    <%= @idea.picture %>
+
+ל- 
+
+= preserve do 
+  - code("erb") do
+    <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+
+%p כעת רפרפשי את הדפדפן שלך כדי לראות מה השתנה.
+
+**מדריך/ה:** דבר/י מעט על HTML.

@@ -32,9 +32,7 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title= "#{data.page.title} — Rails Girls App Tutorial"
 
-    - if I18n.locale == :he
-      = stylesheet_link_tag "http://fast.fonts.net/cssapi/205bde8e-967a-46e0-8556-5ab61ef9fafb.css"
-    - else
+    - if I18n.locale == :en
       = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
 
 

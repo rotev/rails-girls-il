@@ -1,11 +1,21 @@
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
 @import 'compass';
 
 body {
   direction: rtl;
-  font-family: 'Classica W26 Bold';
+
+  font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,
+               Arial,
+               sans-serif;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Classica W26 Bold';  
+  font-family: "Alef Hebrew",
+               “Helvetica Neue”,
+               Helvetica,
+               Arial,
+               sans-serif;
 }
 
 #steps > ul > li > a:before {
@@ -35,6 +45,10 @@ h1, h2, h3, h4, h5 {
       left: 0;
       right: 300px;
 
+      h1 {
+        float: right;
+      }
+
       #os-selector {
         float: left;
         direction: ltr;
@@ -45,6 +59,10 @@ h1, h2, h3, h4, h5 {
 
 pre {
   direction: ltr;
+}
+code {
+  direction: ltr;
+  display: inline-block;
 }
 
 .right {

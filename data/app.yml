@@ -45,3 +45,15 @@ steps:
         title: Add a nav bar and a footer
       css:
         title: Refine with some CSS
+
+  picture-uploads:
+    title: Adding picture uploads
+
+  routes:
+    title: Finetune the routes
+
+  static:
+    title: Create a static page
+
+  whats-next:
+    title: "What's next?"

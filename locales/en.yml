@@ -7,6 +7,10 @@ en:
   create-app: Create the app
   create-scaffold: Create Idea scaffold
   design: Design
+  picture-uploads: Adding picture uploads
+  routes: Finetune the routes
+  static: Create a static page
+  whats-next: "What's next?"
 
   text-editor: Text editor
   terminal: Terminal
