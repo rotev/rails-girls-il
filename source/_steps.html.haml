@@ -1,25 +1,27 @@
 - guide = "app"
 - locale = I18n.locale == :he ? '' : "#{I18n.locale}/"
+
+%h2= t('app-guide', default: 'App Guide')
+
 #steps
   %ul
-    -# I18n.t(:steps).each do |step|
     - data.app.steps.each do |step|
       %li{ class: "#{data.page.step == step[0] ? 'active' : ''}"}
         - link = step[1].parts ? "#{step[0]}/#{step[1].parts.first[0]}" : step[0]
-        = link_to t(step[0], default: step[1].title), "/#{locale}#{guide}/#{link}.html"
+        = link_to t(step[0], default: step[1].title), "/#{locale}guides/#{guide}/#{link}.html"
 
         - if step[1].parts
           - parts = step[1].parts
           %ul
             - parts.each do |part|
               %li{ class: "#{data.page.part == part[0] ? 'active' : ''}"}
-                = link_to t(part[0], default: part[1].title), "/#{locale}#{guide}/#{step[0]}/#{part[0]}.html"
+                = link_to t(part[0], default: part[1].title), "/#{locale}guides/#{guide}/#{step[0]}/#{part[0]}.html"
 
 
   .language-selector
     -# In the future this should be replaced with a generalised solution
     - if I18n.locale == :en
-      - hebrew_url = "/#{current_page.path.gsub('en/app', 'app')}"
+      - hebrew_url = "/#{current_page.path.gsub('en/guides', 'guides')}"
       - english_url = "/#{current_page.path}"
     - else
       - hebrew_url = "/#{current_page.path}"

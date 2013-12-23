@@ -18,19 +18,32 @@ h1, h2, h3, h4, h5 {
                sans-serif;
 }
 
-#steps > ul > li > a:before {
-  margin: 0 0 0 10px;
-}
+#sidebar {
+  #logo {
+    background-image: url(/images/logo-heb.png);
+  }
 
-#steps > ul > li > ul > li > a {
-  padding: 5px 36px 5px 10px;
-}
+  h2 {
+    margin: 0 10px 10px 0;
+  }
 
-#steps > ul > li > ul > li.active a:before {
-  margin-right: -19px;
-  margin-left: 4px;
-  @include rotateY(180deg);
-}
+  #steps {
+    & > ul > li > a:before {
+      margin: 0 0 0 10px;
+    }
+
+    & > ul > li > ul > li > a {
+      padding: 5px 36px 5px 10px;
+    }
+
+    & > ul > li > ul > li.active a:before {
+      margin-right: -19px;
+      margin-left: 4px;
+      @include rotateY(180deg);
+    }
+  } // steps
+} // guides
+
 .language-selector {
   margin-left: 0; 
   margin-right: 12px;
@@ -50,8 +63,9 @@ h1, h2, h3, h4, h5 {
       }
 
       #os-selector {
-        float: left;
         direction: ltr;
+        right: auto;
+        left: 50px;
       }
     }
   }

@@ -25,6 +25,7 @@
         - if part[0] == data.page.part
           - current_part = part
 
+- locale_root = I18n.locale == :en ? '/en' : '/'
 
 !!!
 %html.no-js{lang: "en"}
@@ -45,8 +46,9 @@
 
   %body{class: page_classes}
 
-    
-    = partial(:steps)
+    #sidebar
+      = link_to "", locale_root, id: 'logo'        
+      = partial(:steps)
  
     #content.clearfix
       %section{ id: data.page.part || data.page.step }
@@ -64,7 +66,7 @@
 
       - if next_link
         - locale = I18n.locale == :he ? '' : "/#{I18n.locale}"
-        = link_to t(:continue, default: "continue"), "#{locale}/#{guide}/#{next_link}", class: 'button right', id: 'continue'
+        = link_to t(:continue, default: "continue"), "#{locale}/guides/#{guide}/#{next_link}", class: 'button right', id: 'continue'
 
     = javascript_include_tag  "app", "vendor/lightbox-2.6.min"
 

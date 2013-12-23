@@ -2,6 +2,8 @@ en:
   hello: hello
   direction: ltr
 
+  app-guide: App Guide
+
   introduction: Introduction
   tools: Get to know the tools
   create-app: Create the app
