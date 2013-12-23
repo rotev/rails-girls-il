@@ -1,0 +1,31 @@
+---
+step: design
+part: bootstrap
+title: הוסיפי את ספריית Bootstrap
+---
+
+
+**מדריך/ה:** דברי על הקשר בין HTML ו-Rails. אלו חלקים מה-views הם HTML ואלו הם Embedded Ruby (ERB)? מה זה MVC ואיך זה מתקשר לעניננו? (Models ו-controllers אחראיים לייצור תצוגות ה-HTML.)
+
+%p האפליקציה עדיין לא נראית משהו. בואי נעשה עם זה משהו. נוסיף את הפרוייקט Twitter Bootstrap כדי לתת לנו סטייל נחמד יותר בקלות רבה.
+
+פתחי את הקובץ `app/views/layouts/application.html.erb` בעורך הטקסט שלך, ומעל השורה
+
+= preserve do
+  - code("erb") do
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+הוסיפי
+- code("erb") do
+  %link{href: "http://railsgirls.com/assets/bootstrap.css", rel: "stylesheet"}/
+והחליפי את 
+
+= preserve do 
+  - code("erb") do
+    \<%= yield %>
+  ב-
+  - code("erb") do
+    .container
+      \<%= yield %>
+
+
+

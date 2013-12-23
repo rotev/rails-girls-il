@@ -18,4 +18,12 @@ Let's also add a navigation bar and footer to the layout. In the same file, unde
             %li.active
               %a{href: "/ideas"} Ideas
 
-and before `</body>`.
+and before `</body>` add
+
+= preserve do 
+  - code("erb") do
+    %footer
+      .container
+        Rails Girls 2014
+
+Pay attention to the difference between `<body>` and `</body>`!

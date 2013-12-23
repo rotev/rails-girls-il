@@ -1,0 +1,28 @@
+---
+step: design
+part: nav_and_footer
+title: הוסיפי תפריט ניווט ו-footer
+---
+
+בואי נוסיף גם בר ניווט ו-footer ל-layout. באותו הקובץ, תחת `<body>` הוסיפי
+
+
+= preserve do 
+  - code("erb") do
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{href: "/"} The Idea app
+          %ul.nav
+            %li.active
+              %a{href: "/ideas"} Ideas
+
+ולפני `</body>` הוסיפי
+
+= preserve do 
+  - code("erb") do
+    %footer
+      .container
+        Rails Girls 2014
+
+שימי להבדל בין `<body>` ל-`</body>`!        

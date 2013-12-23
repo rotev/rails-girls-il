@@ -1,0 +1,19 @@
+---
+step: design
+part: css
+title: Refine the design with CSS
+---
+
+
+כעת בואי גם נשנה את העיצוב של טבלת הרעיונות. פתחי את הקובץ `app/assets/stylesheets/application.css` והוסיפי בתחתית
+
+= preserve do
+  - code("css") do
+    body { padding-top: 100px; }
+    footer { margin-top: 100px; }
+    table, td, th { vertical-align: middle !important; border: none !important; }
+    th { border-bottom: 1px solid #DDD !important; }
+
+%p כעת רפרשי את הדפדפן כדי לראות מה השתנה. את יכולה גם לשנות את ה-HTML וה-CSS עוד.
+
+**מדריך/ה:** דבר/י קצת על CSS ו-layouts.

@@ -1,0 +1,16 @@
+---
+step: create-scaffold
+part: scaffold
+title: צרי את שלד הרעיון
+---
+
+
+אנחנו הולכים להשתמש בפונקציונליות ה-scaffold (שלד) של Rails כדי ליצור אפליקציה התחלתית שמאפשרת לנו להציג רשימה, להוסיף, למחוק, לערוך ולצפות בדברים; במקרה שלנו: רעיונות.
+
+**מדריך/ה:** מה זה scaffolding ב-Rails? (הסבר/הסבירי את הפקודה, את שם ה-model ואת הטבלה המשוייכת לו, naming conventions, מאפיינים וטיפוסים, וכו'.) מהן מיגרציות ובשביל מה צריך אותן?
+
+
+<% code("sh") do %>
+rails generate scaffold idea name:string description:text picture:string<% end %>
+
+ה-scaffold מייצר קבצים חדשים בתיקיית הפרוייקט שלך, אז בואי נסקור חלק מהם בקצרה.

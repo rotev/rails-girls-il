@@ -4,40 +4,39 @@ step: introduction
 title: הקדמה
 ---
 
-%p Hi! :-)
+%p אהלן! :-)
 %p 
-  Now that you've played with the 
+  עכשיו אחרי ששיחקת קצת עם 
   
   =link_to 'Try Ruby', 'http://tryruby.org/', target: '_blank'
-  tutorial a little bit, prepared your laptop by 
+  , הכנת את סביבת העבודה שלך באמצעות 
 
-  =link_to 'installing the relevant software', 'http://guides.railsgirls.com/install', target: '_blank'
-  and watched an 
-
-  =link_to 'introductory lecture', 'http://rotemharel.com/intro-to-web/', target: '_blank'
-  about web development, you are more than ready to start coding! :-)
+  =link_to 'התקנת התוכנה המתאימה', 'http://guides.railsgirls.com/install', target: '_blank'
+  וצפית
+  =link_to 'בהרצאת מבוא', 'http://rotemharel.com/intro-to-web/', target: '_blank'
+  לפיתוח Web, את יותר ממוכנה להתחיל לקודד! :-)
 
 %p 
-  We're going to build a Rails app from scratch together. Before we start, let's review the 
-  =link_to 'final result', 'http://rails-girls-tlv.herokuapp.com/', target: '_blank'
+  אנחנו הולכים לבנות אפליקציית Rails מאפס ביחד. לפני שנתחיל, בואי נסקור את 
+  =link_to 'התוצאה הסופית', 'http://rails-girls-tlv.herokuapp.com/', target: '_blank'
   \.
 
-%h3 The main page
+%h3 העמוד הראשי
 %p
-  The main page of our application is a table showing a list of ideas. Each idea has a picture, a name and a description. Each idea also has links named "Show", "Edit" and "Destroy". Below the table there's a "New Idea" link.
+  העמוד הראשי של האפליקצייה שלנו הוא טבלה שמציג רשימה של רעיונות. לכל רעיון יש תמונה, שם ותיאור. לכל רעיון יש גם לינקים בשם "Show", "Edit" ו- "Destroy". מתחת לטבלה יש לינק נוסף בשם "New Idea".
 %p=screenshot 'app/intro/app_ideas_index.png'
 
-%h3 The idea page
-The "Show" link of each idea leads to the idea page. This is how it looks:
+%h3 עמוד הרעיון
+הלינק "Show" של כל רעיון מוביל לעמוד הרעיון שלו. ככה זה נראה:
 %p=screenshot 'app/intro/app_ideas_show.png'
 
-%h3 The edit idea page
-The "Edit" link of each idea leads to a page that allows you to edit the details of an existing idea.
+%h3 עמוד עריכת רעיון
+הלינק "Edit" של כל רעיון מוביל לעמוד שבו ניתן לערוך את פרטי הרעיון:
 %p=screenshot 'app/intro/app_ideas_edit.png'
 
 
-%h3 The create idea page
-We'll also need a page that will allow us to create a new idea and add it to the table in the main page.
+%h3 עמוד יצירת רעיון
+נצטרך גם עמוד שיאפשר לנו ליצור רעיון חדש ולהוסיף אותו לטבלת הרעיונות בעמוד הראשי.
 %p=screenshot 'app/intro/app_ideas_edit.png'
 
-Hit the *continue* button and get to know the tools we'll use.
+לחצי על כפתור *המשיכי* כדי ללמוד על הכלים שנשתמש בהם היום.
