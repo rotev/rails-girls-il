@@ -105,6 +105,24 @@ body > header {
   }
 }
 
+.welcome {
+  background: url(/images/cover.jpg) no-repeat;
+  background-size: 100%;
+  height: 400px;
+
+  p {
+    width: 50%;
+    float: right;
+  }
+  p:first-child {
+    font-size: 35px; line-height: 50px;
+  }
+
+  p:nth-child(2) {
+    clear: both;
+  }
+}
+
 
 #sidebar.guide {
   float: left;

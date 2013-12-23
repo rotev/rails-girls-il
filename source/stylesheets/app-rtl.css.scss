@@ -99,3 +99,11 @@ code {
 .right {
   float: left !important;
 }
+
+.welcome {
+  background-image: url(/images/cover_flip.jpg);
+
+  p {
+    float: left;
+  }
+}
