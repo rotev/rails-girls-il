@@ -2,6 +2,9 @@ en:
   hello: hello
   direction: ltr
 
+  getting-started: Getting started
+  events: Events
+
   app-guide: App Guide
 
   introduction: Introduction

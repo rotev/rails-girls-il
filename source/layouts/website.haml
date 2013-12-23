@@ -1,0 +1,17 @@
+- wrap_layout :layout do
+  
+  %header
+    .wrapper
+      = partial(:logo)
+
+      %nav
+        = link_to t('getting-started'), guide_url('getting-started')
+        = link_to t('events'), localized_url('events')
+
+      .language-selector
+        = link_to 'עב', "/", class: I18n.locale == :he ? 'active' : ''
+        = link_to 'en', "/en", class: I18n.locale == :en ? 'active' : ''
+
+  #content
+    .wrapper
+      = yield

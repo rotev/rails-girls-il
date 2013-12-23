@@ -57,13 +57,36 @@ activate :syntax
 
 activate :i18n, mount_at_root: :he
 
+activate :livereload
+
 helpers do 
   def screenshot url, cls=""
     link_to "/images/#{url}", {data: {lightbox: 'screenshot'}, class: 'screenshot'} do
       image_tag url, class: cls
     end
   end
+
+  def locale_root
+    I18n.locale == :en ? '/en' : '/'
+  end
+
+  def localized_base
+    I18n.locale == :he ? '/' : "#{I18n.locale}/"
+  end
+
+  def localized_url(page)
+    "#{localized_base}#{page}"
+  end
+
+  def guide_url(guide)
+    localized_url("guides/#{guide}")
+  end
 end
+
+page "*", layout: :website
+
+page "guides/*", layout: :guide
+page "en/guides/*", layout: :guide
 
 
 # Build-specific configuration

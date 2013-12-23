@@ -1,0 +1,50 @@
+- current_step = nil
+- current_part = nil
+- next_part = nil
+- next_step = nil
+- next_link = nil
+- guide = "app"
+
+- data.app.steps.each do |step|
+  - if current_step
+    - next_step = step
+    - unless next_link
+      - if next_step[1].parts
+        - next_link = "#{next_step[0]}/#{next_step[1].parts.first[0]}.html"
+      - else
+        - next_link = "#{next_step[0]}.html"
+    - break
+  - if step[0] == data.page.step
+    - current_step = step
+    - if step[1].parts
+      - step[1].parts.each do |part|
+        - if current_part
+          - next_part = part
+          - next_link = "#{current_step[0]}/#{next_part[0]}.html"
+          - break
+        - if part[0] == data.page.part
+          - current_part = part
+
+- wrap_layout :layout do
+
+  #sidebar.guide
+    = partial(:logo)
+    = partial(:steps)
+
+  #content.guide.clearfix
+    %section{ id: data.page.part || data.page.step }
+      %header
+        %h1= data.page.title
+
+        #os-selector
+          %select
+            %option{value: 'windows'} Windows
+            %option{value: 'nix'} Linux
+            %option{value: 'osx'} OS X
+
+
+      = yield
+
+    - if next_link
+      - locale = I18n.locale == :he ? '' : "/#{I18n.locale}"
+      = link_to t(:continue, default: "continue"), "#{locale}/guides/#{guide}/#{next_link}", class: 'button right', id: 'continue'

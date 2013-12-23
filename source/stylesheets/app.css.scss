@@ -32,16 +32,84 @@ body.os-nix .nix { display: inline-block; }
 body.os-osx .osx { display: inline-block; }
 
 
-.smiley {
-  display: inline-block;
-  font-weight: bold;
+.language-selector {
+  a {
+    display: inline-block;
+    border: 1px solid #fff;
+    @include opacity(0.5);
+    padding: 0 5px;
+    color: white;
+    @include transition(all 0.2s);
+
+    &.active {
+      @include opacity(0.8);        
+    }
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+  a:first-child {
+
+  }
+  a:nth-child(2) {
+
+  }
+} // language selector
+
+
+
+#logo {
+  width: 150px; height: 56px;
+  background: url(/images/logo-eng.png) no-repeat;
+  background-size: 100%;
+  display: block;
 }
 
-#sidebar {
+
+body > header {
+  height: 100px;
+  background: $orange;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .wrapper {
+    width: 960px;
+    margin: auto;
+  }
+
+  #logo {
+    float: left;
+  }
+
+  .language-selector {
+    float: right;
+  }
+
+  nav {
+    float: left;
+    padding: 15px 50px 20px 50px;
+
+    a {
+      color: white;
+      font-size: 20px;
+      padding: 15px;
+    }
+  }
+}
+
+#content:not(.guide) {
+  .wrapper {
+    width: 960px;
+    margin: auto;
+  }
+}
+
+
+#sidebar.guide {
   float: left;
   position: fixed;
   width: 300px;
-  //@include box-shadow(1px 0px 2px 0px rgba(#000, 0.5));
   min-height: 100%;
   background: $orange;
   padding: 20px 20px 20px 10px;
@@ -49,23 +117,8 @@ body.os-osx .osx { display: inline-block; }
   z-index: 2;
 
   color: white;
-  a { 
-    color: white; 
-    border-top: 1px solid rgba(white, 0);
-    border-bottom: 1px solid rgba(white, 0);
-    transition: all 0.2s;
-    @include text-shadow(1px 1px 3px rgba(darken($orange, 30), 0.5));
-  }
-  a:hover {
-    // border-bottom: 1px solid lighten($orange, 8);
-    // border-top: 1px solid lighten($orange, 8);
-  }
 
   #logo {
-    width: 150px; height: 56px;
-    background: url(/images/logo-eng.png) no-repeat;
-    background-size: 100%;
-    display: block;
     margin: 0 auto 25px auto;
   }
 
@@ -82,6 +135,18 @@ body.os-osx .osx { display: inline-block; }
       counter-reset: step;
       list-style-type: none;
       margin-left: 0;
+
+      a { 
+        color: white; 
+        border-top: 1px solid rgba(white, 0);
+        border-bottom: 1px solid rgba(white, 0);
+        transition: all 0.2s;
+        @include text-shadow(1px 1px 3px rgba(darken($orange, 30), 0.5));
+      }
+      a:hover {
+        // border-bottom: 1px solid lighten($orange, 8);
+        // border-top: 1px solid lighten($orange, 8);
+      }
 
       & > li {
         &.active {        
@@ -164,36 +229,17 @@ body.os-osx .osx { display: inline-block; }
   .language-selector {
     margin-top: 30px;
     margin-left: 12px;
-    a {
-      display: inline-block;
-      border: 1px solid #fff;
-      @include opacity(0.5);
-      padding: 0 5px;
-
-      &.active {
-        @include opacity(0.8);        
-      }
-
-      &:hover {
-        @include opacity(1);
-      }
-    }
-    a:first-child {
-
-    }
-    a:nth-child(2) {
-
-    }
   }
 
 } // steps
+
 
 
 body.scrolled #content header {
   @include box-shadow(0px 0px 15px rgba(black, 0.2));
 }
 
-#content {
+#content.guide {
   display: block;
   margin-left: 300px;
   padding: 25px 50px;
@@ -245,7 +291,7 @@ body.scrolled #content header {
       margin: 0 -1px;
 
       &:hover {
-        background: #20B3C9;
+        background: $orange;
         color: #fff;
         text-decoration: none;
       }
