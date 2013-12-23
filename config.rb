@@ -57,6 +57,15 @@ activate :syntax
 
 activate :i18n, mount_at_root: :he
 
+helpers do 
+  def screenshot url, cls=""
+    link_to "/images/#{url}", {data: {lightbox: 'screenshot'}, class: 'screenshot'} do
+      image_tag url, class: cls
+    end
+  end
+end
+
+
 # Build-specific configuration
 configure :build do
 

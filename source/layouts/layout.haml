@@ -25,6 +25,7 @@
         - if part[0] == data.page.part
           - current_part = part
 
+
 !!!
 %html.no-js{lang: "en"}
   %head
@@ -36,7 +37,7 @@
       = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
 
 
-    = stylesheet_link_tag "normalize", "foundation", "app"
+    = stylesheet_link_tag "normalize", "foundation", "app", "lightbox"
 
     - if t(:direction) == 'rtl'
       = stylesheet_link_tag "app-rtl"
@@ -65,4 +66,4 @@
         - locale = I18n.locale == :he ? '' : "/#{I18n.locale}"
         = link_to t(:continue, default: "continue"), "#{locale}/#{guide}/#{next_link}", class: 'button right', id: 'continue'
 
-    = javascript_include_tag  "app"
+    = javascript_include_tag  "app", "vendor/lightbox-2.6.min"

@@ -16,7 +16,7 @@ First, let's open a terminal:
   </div>
   <div class="windows">    
     <p>Click Start and look for <em>Command Prompt</em>, then click <em>Command Prompt with Ruby and Rails</em>.</p>
-    <%= image_tag 'app/tools/command-open-windows.png' %>
+    <%= screenshot 'app/tools/command-open-windows.png' %>
   </div>
 </div>
 
@@ -24,7 +24,7 @@ First, let's open a terminal:
 A black window will open. This is called a <em>Terminal</em>, or <em>Command Prompt</em>.
 <div class="os-specific">
   <div class="windows">
-    <%=image_tag 'app/tools/command-windows.png' %>
+    <%= screenshot 'app/tools/command-windows.png' %>
   </div>
 </div>
 
@@ -42,7 +42,7 @@ This command will create a new directory on your computer named <code>projects</
   <div class="windows">
     <p>
 You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. 
-<%=image_tag 'app/app/dir1.png' %>
+<%= screenshot 'app/app/dir1.png' %>
     </p>  
   </div>
 </div>
@@ -53,4 +53,4 @@ Now you want to change the directory you are currently in to the <code>projects<
 
 
 You can verify you are now in an empty directory or folder by again running the <code class="nix osx">ls</code><code class="windows">dir</code> command again.
-<%=image_tag 'app/app/dir2.png', class: 'windows' %>
+<%= screenshot 'app/app/dir2.png', 'windows' %>
