@@ -84,16 +84,21 @@ body > header {
 
   .language-selector {
     float: right;
+    margin-top: 16px;
   }
 
   nav {
     float: left;
-    padding: 15px 50px 20px 50px;
+    padding: 18px 50px 20px 50px;
 
     a {
       color: white;
       font-size: 20px;
       padding: 15px;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }
@@ -122,6 +127,56 @@ body > header {
     clear: both;
   }
 }
+
+.index, .en_index {
+  padding-bottom: 50px;
+
+  #workshops {
+    width: 45%;
+    float: left;
+
+    h1 {
+      margin-bottom: 34px;
+    }
+
+    article {
+      margin-bottom: 21px;
+      border-bottom: 1px dotted #999;
+      padding-bottom: 17px;
+
+      .where {
+        font-size: 30px;
+        display: inline-block;
+        width: 150px;
+      }
+
+      .when {
+        display: inline-block;
+      }
+    }
+  }
+
+  #photos {
+    width: 50%;
+    float: right;
+    position: relative;
+
+    a {
+      width: 100%;
+      position: absolute; top: 0; left: 0;
+      @include opacity(0);
+      @include transition(opacity 0.2s);
+
+      &.active {
+        @include opacity(1);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}// index
 
 
 #sidebar.guide {

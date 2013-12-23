@@ -66,20 +66,45 @@ helpers do
     end
   end
 
+  def gallery_photo url, cls=""
+    link_to "/images/#{url}", {data: {lightbox: 'gallery'}, class: cls} do
+      image_tag url.gsub('.', '_tn.')
+    end
+  end
+
   def locale_root
     I18n.locale == :en ? '/en' : '/'
   end
 
-  def localized_base
-    I18n.locale == :he ? '/' : "#{I18n.locale}/"
+  def localized_base(locale=nil)
+    locale = I18n.locale if locale.nil?
+    locale == :he ? '/' : "/#{locale}/"    
   end
 
-  def localized_url(page)
-    "#{localized_base}#{page}"
+  def localized_url(page, locale=nil)
+    "#{localized_base(locale)}#{page}"
   end
 
-  def guide_url(guide)
-    localized_url("guides/#{guide}")
+  def guide_url(guide, locale=nil)
+    localized_url("guides/#{guide}", locale)
+  end
+
+  def guide_step_url(guide, step, locale=nil)
+    "#{guide_url(guide, locale)}/#{step}.html"
+  end
+
+  def guide_part_url(guide, step, part, locale=nil)
+    if (step.nil? or step.empty?) and (part.nil? or part.empty?)
+      guide_url(guide, locale)
+    elsif part.nil? or part.empty?
+      guide_step_url(guide, step, locale)
+    else
+      "#{guide_url(guide, locale)}/#{step}/#{part}.html"
+    end
+  end
+
+  def current_guide_url(locale=nil)
+    guide_part_url(data.page.guide, data.page.step, data.page.part, locale)
   end
 end
 

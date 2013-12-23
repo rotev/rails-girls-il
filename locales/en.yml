@@ -3,10 +3,13 @@ en:
   direction: ltr
 
   getting-started: Getting started
-  events: Events
+  workshops: Workshops
 
+  # guide names
   app-guide: App Guide
+  getting-started-guide: Starting Guide
 
+  # app guide steps and parts
   introduction: Introduction
   tools: Get to know the tools
   create-app: Create the app

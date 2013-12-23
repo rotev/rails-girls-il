@@ -100,10 +100,20 @@ code {
   float: left !important;
 }
 
-.welcome {
-  background-image: url(/images/cover_flip.jpg);
+.index {
+  .welcome {
+    background-image: url(/images/cover_flip.jpg);
 
-  p {
+    p {
+      float: left;
+    }
+  }
+
+  #workshops {
+    float: right;
+  }
+
+  #photos {
     float: left;
   }
 }

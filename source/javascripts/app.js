@@ -7,6 +7,7 @@ $(document).ready(function(){
   //init_navigation_keys();
   init_os_selector();
   init_header_shadow();
+  init_rotating_photos();
 });
 
 var body = $('body');
@@ -59,4 +60,17 @@ function cookies() {
   }
 
   return cookies;
+}
+
+function init_rotating_photos() {
+  var photos = $('#photos'),
+      current = 4,
+      total_photos = photos.find('a').length;
+
+  setInterval(function(){
+    current += 1;
+    if (current > total_photos) { current = 1; }
+    $('#photos a.active').removeClass('active');
+    $('#photos a:nth-child(' + current + ')').addClass('active');
+  }, 5000);
 }

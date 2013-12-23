@@ -3,10 +3,13 @@ he:
   direction: rtl
 
   getting-started: התחילי כאן!
-  events: ארועים
+  workshops: סדנאות
 
+  # guide names
   app-guide: מדריך האפליקצייה
+  getting-started-guide: מדריך ההתחלה
 
+  # app guide steps and parts
   introduction: הקדמה
   tools: הכירי את הכלים
   create-app: צרי את האפליקצייה
