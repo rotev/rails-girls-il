@@ -47,4 +47,4 @@
 
     - if next_link
       - locale = I18n.locale == :he ? '' : "/#{I18n.locale}"
-      = link_to t(:continue, default: "continue"), "#{locale}/guides/#{guide}/#{next_link}", class: 'button right', id: 'continue'
+      = link_to t(:continue, default: "continue"), "#{locale}/guides/#{guide}/#{next_link}", class: 'button right', id: 'continue', style: 'clear: both;'

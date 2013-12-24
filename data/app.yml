@@ -29,10 +29,6 @@ steps:
     parts:
       scaffold: 
         title: Create the scaffold
-      migrate:
-        title: Migrate the database
-      restart:
-        title: Restart the Rails server
       review:
         title: Review the code
 

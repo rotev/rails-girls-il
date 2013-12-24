@@ -1,0 +1,46 @@
+---
+guide: app
+step: create-scaffold
+part: scaffold
+title: Create Idea scaffold
+---
+
+
+%p We're going to use Rails' scaffold functionality to generate a starting point that allows us to list, add, remove, edit, and view things; in our case ideas.
+
+**Coach:** What is Rails scaffolding? (Explain the command, the model name and related database table, naming conventions, attributes and types, etc.) What are migrations and why do you need them? What is MVC?
+
+= preserve do
+  - code("sh") do
+    rails generate scaffold idea name:string description:text picture:string
+
+The scaffold creates new files in your project directory, but to get it to work properly we need to run a couple of other commands to update our database and restart the server.
+
+= preserve do
+  - code("sh") do
+    rake db:migrate
+    rails server
+
+%p 
+  Open
+  =link_to "http://localhost:3000/ideas", "http://localhost:3000/ideas"
+  in your browser. Click around and test what you got by running these few command-line commands.
+
+
+%p This is the ideas table. It's still empty because we didn't create any ideas:
+= screenshot 'app/scaffold/index.png'
+
+%p Click on "New Idea" link to get to the "New idea" page that looksl like this:
+= screenshot 'app/scaffold/new.png'
+
+%p You'll be able to fill in the information of your idea like this:
+= screenshot 'app/scaffold/new_filled.png'
+
+%p After clicking on the "Create Idea" button you'll be forwarded to the idea page, which contains the information you just filled in. At the top of the page you'll see a green notification stating that the creation of the idea was successful.
+= screenshot 'app/scaffold/show.png'
+
+%p Click "Back" to return to the list of ideas and see that it now contains the idea you just created:
+= screenshot 'app/scaffold/index2.png'
+
+
+%p And that's it! Add some more ideas and then continue to review the code.

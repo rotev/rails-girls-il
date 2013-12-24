@@ -1,0 +1,70 @@
+---
+guide: app
+step: create-app
+part: review
+title: Review the code
+---
+
+<%= image_tag 'app/app/files_and_folders.png', style: 'float: right;' %>
+Now we'll review some of the generated folders and files and more or less understand their role in your app.
+
+On the right side you can see a list of some of the folders and files that the <code>rails new</code> command automatically generated for us. The folders and files we're interested in today are marked in an orange rectangle.
+
+<table style="max-width: 540px;">
+  <thead>
+    <tr>
+      <th style="width: 30%;">Folder/file name</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>app</code></td>
+      <td>
+        This is the most important folder in your app. Most of the code is there.
+      </td>
+    </tr>
+    <tr>
+      <td><code>app/assets</code></td>
+      <td>
+        This folder contains static files. These are files that the Rails server serves to the browser without manipulating them first. Such files can be images (they'll be placed in the <code>images</code> folder), files containing CSS code (they'll be placed in the <code>stylesheets</code> folder), or JavaScript files which we won't talk about today.
+      </td>
+    </tr>
+    <tr>
+      <td><code>app/controllers</code></td>
+      <td>
+        This folder contains code files that are written in the <code>ruby</code> language. Most of your app's logic (how the app works and what it does) is there. Currently your app doesn't do a lot, so all you'll see there is a little file called <code>application_controller.rb</code>. If you open this file in your text editor you'll see that it contains very little code.
+      </td>
+    </tr>
+    <tr>
+      <td><code>app/models</code></td>
+      <td>
+        This folder contains all your models. You still don't know what a model is, but you'll learn about it in the 4th step.
+      </td>
+    </tr>
+    <tr>
+      <td><code>app/views</code></td>
+      <td>
+        This folder contains all of your app's HTML code.
+      </td>
+    </tr>
+    <tr>
+      <td><code>app/db</code></td>
+      <td>
+        This folder contains all of the data in your app. Currently there's no data in there, but after you complete the next step it will contain all of your ideas!
+      </td>
+    </tr>
+    <tr>
+      <td><code>public/index.html</code></td>
+      <td>
+        This file exists in your app only if you're using Rails 3. If you're using Rails 4 you won't see it (and that's fine!). This file contains the HTML code used to generate the "Welcome aboard" page you've seen earlier.
+      </td>
+    </tr>
+    <tr>
+      <td><code>Gemfile</code></td>
+      <td>
+        This file contains a list of external code libraries that your app uses. In step 6 you'll learn how to use external code libraries.
+      </td>
+    </tr>
+  </tbody>
+</table>

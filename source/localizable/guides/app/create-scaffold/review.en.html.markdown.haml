@@ -1,0 +1,62 @@
+---
+guide: app
+step: create-scaffold
+part: review
+title: Review the code
+---
+
+The scaffold command automatically created many code files in your project's folder. These files are responsible for creating the pages we just saw. Let's review some of them.
+
+%table{style: "max-width: 800px;"}
+  %thead
+    %tr
+      %th{style: "width: 30%;"} Folder/file name
+      %th Role
+  %tbody
+    %tr
+      %td
+        %code db/migrate/XXXXX_create_ideas.rb
+      %td
+        This file is called "the migration file". It contains instructions in the Ruby language that tells your Rails app how to change the database so that it is able to contain the ideas you created.
+    %tr
+      %td
+        %code app/models/idea.rb
+      %td
+        The Idea model.
+    %tr
+      %td
+        %code app/controllers/ideas_controller.rb
+      %td
+        The idea controller contains the logic behind all the actions we saw: reading the list of ideas from the database for the list page; reading a single idea for the show page; creating a new idea; editing an existing idea and deleting an idea.
+    %tr
+      %td
+        %code app/views/ideas
+      %td
+        This folder contains all the HTML files that were created. The following 5 files are all contained in this folder.
+    %tr
+      %td
+        %code index.html.erb
+      %td
+        The HTML of the ideas list.
+    %tr
+      %td
+        %code edit.html.erb
+      %td
+        The HTML of the edit idea page.
+    %tr
+      %td
+        %code show.html.erb
+      %td
+        The HTML of the idea page.
+    %tr
+      %td
+        %code new.html.erb
+      %td
+        The HTML of the new idea page.
+    %tr
+      %td
+        %code _form.html.erb
+      %td
+        The HTML of the idea form. The edit and new page both use this file to display a form.
+
+**Coach:** Explain the code in some or all of these files. It is recommended to give this explanation to all the participants in your group together.

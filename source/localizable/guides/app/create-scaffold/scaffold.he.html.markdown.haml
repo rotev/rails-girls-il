@@ -1,0 +1,45 @@
+---
+guide: app
+step: create-scaffold
+part: scaffold
+title: צרי את שלד הרעיון
+---
+
+%p אנחנו הולכים להשתמש בפונקציונליות ה-scaffold (שלד) של Rails כדי ליצור אפליקציה התחלתית שמאפשרת לנו להציג רשימה, להוסיף, למחוק, לערוך ולצפות בדברים; במקרה שלנו: רעיונות.
+
+**מאמן/ת:** מה זה scaffolding ב-Rails? (הסבר/י את הפקודה, את שם ה-model ואת הטבלה המשוייכת לו, naming conventions, מאפיינים וטיפוסים, וכו'.) מהן מיגרציות ובשביל מה צריך אותן? מה זה MVC?
+
+= preserve do
+  - code("sh") do
+    rails generate scaffold idea name:string description:text picture:string
+
+ה-scaffold מייצר קבצים חדשים בתיקיית הפרוייקט שלך, אבל כדי לגרום לזה לעבוד כמו שצריך אנחנו צריכים להריץ כמה פקודות נוספות כדי לעדכן את ה-database שלנו ולאתחל את השרת.
+
+= preserve do
+  - code("sh") do
+    rake db:migrate
+    rails server
+
+%p 
+  גלשי לכתובת 
+  =link_to "http://localhost:3000/ideas", "http://localhost:3000/ideas"
+  בדפדפן שלך. לחצי מסביב ובדקי את מה שקיבלת אחרי שהרצת את מעט הפקודות שראינו.
+
+
+%p זוהי טבלת הרעיונות. מכיוון שעדיין לא יצרנו אף רעיון היא ריקה:
+= screenshot 'app/scaffold/index.png'
+
+%p נלחץ על הקישור New Idea ונגיע לעמוד יצירת רעיון שכותרתו "New Idea":
+= screenshot 'app/scaffold/new.png'
+
+%p נוכל למלא את תוכן הרעיון שלנו כמו כאן:
+= screenshot 'app/scaffold/new_filled.png'
+
+%p ואחרי שנלחץ על "Create Idea" נגיע לעמוד הרעיון אשר יציג לנו את פרטי הרעיון שהרגע הזנו. כמו כן בראש העמוד בצבע ירוק נקבל הודעה שיצירת הרעיון בוצעה בהצלחה:
+= screenshot 'app/scaffold/show.png'
+
+%p כעת נלחץ על "Back" כדי לחזור לרשימת הרעיונות, ונראה כי הרעיון שהוספנו מופיע:
+= screenshot 'app/scaffold/index2.png'
+
+
+%p זה הכל! 

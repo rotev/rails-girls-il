@@ -5,9 +5,9 @@ part: bootstrap
 title: Add Bootstrap
 ---
 
+**Coach:** Talk about the relationship between HTML and Rails. What part of views is HTML and what is Embedded Ruby (ERB)? What is MVC and how does this relate to it? (Models and controllers are responsible for generating the HTML views.)
 
-
-The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
+%p The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
 
 Open `app/views/layouts/application.html.erb` in your text editor and above the line
 
@@ -15,8 +15,10 @@ Open `app/views/layouts/application.html.erb` in your text editor and above the 
   - code("erb") do
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
 add
-- code("erb") do
-  %link{href: "http://railsgirls.com/assets/bootstrap.css", rel: "stylesheet"}/
+= preserve do
+  - code("erb") do
+    %link{href: "http://railsgirls.com/assets/bootstrap.css", rel: "stylesheet"}
+    %link{href: "http://railsgirls.com/assets/bootstrap-theme.css", rel: "stylesheet"}/
 and replace
 
 = preserve do 

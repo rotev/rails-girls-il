@@ -88,6 +88,11 @@ body > header {
       }
     }
   }
+
+  table {
+    text-align: right;
+    th { text-align: right; }
+  }
 }
 
 pre {
