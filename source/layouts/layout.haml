@@ -3,17 +3,34 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    %title= "#{data.page.title} — Rails Girls App Tutorial"
+
+    - if data.page.title
+      - title = "#{data.page.title} — Rails Girls Tel-Aviv—Yaffo"
+    - else
+      - title = "Rails Girls Tel-Aviv—Yaffo"
+    %title= title
 
     - if I18n.locale == :en
       = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
-
 
     = stylesheet_link_tag "normalize", "foundation", "app", "lightbox"
 
     - if t(:direction) == 'rtl'
       = stylesheet_link_tag "app-rtl"
 
+    -# Some SEO stuff
+    - description = data.page.description || 'Rails Girls Tel-Aviv—Yaffo aims at giving girls and women the tools for building their own ideas'
+    %meta{name: 'description', content: description}
+
+    / Twitter Card data
+    %meta{name: 'twitter:card', value: description }
+
+    / Open Graph data
+    %meta{name: 'og:title', content: title }
+    %meta{name: 'og:title', content: 'article' }
+    %meta{name: 'og:url', content: 'http://railsgirls.co.il/' }
+    %meta{name: 'og:image', content: 'http://railsgirls.co.il/images/social_networks_image.jpg' }
+    %meta{name: 'og:description', content: description }
 
   %body{class: page_classes}
 
