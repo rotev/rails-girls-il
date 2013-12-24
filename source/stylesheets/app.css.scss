@@ -15,12 +15,10 @@ $orange: #DE390C;
 }
 
 html {
-  height: 100%;
 }
 
 body {
   font-family: 'Cabin', sans-serif;
-  height: 100%;
   line-height: 150%;
   overflow-y: scroll;
 }
@@ -183,7 +181,7 @@ body > header {
   float: left;
   position: fixed;
   width: 300px;
-  min-height: 100%;
+  height: 100%;
   background: $orange;
   padding: 20px 20px 20px 10px;
   @include box-sizing(border-box);
@@ -204,103 +202,106 @@ body > header {
   }
 
   #steps {
-    & > ul {
-      counter-reset: step;
-      list-style-type: none;
-      margin-left: 0;
+    overflow-y: auto;
+    .wrapper {
+      & > ul {
+        counter-reset: step;
+        list-style-type: none;
+        margin-left: 0;
 
-      a { 
-        color: white; 
-        border-top: 1px solid rgba(white, 0);
-        border-bottom: 1px solid rgba(white, 0);
-        transition: all 0.2s;
-        @include text-shadow(1px 1px 3px rgba(darken($orange, 30), 0.5));
-      }
-      a:hover {
-        // border-bottom: 1px solid lighten($orange, 8);
-        // border-top: 1px solid lighten($orange, 8);
-      }
-
-      & > li {
-        &.active {        
-          font-weight: bold;
+        a { 
+          color: white; 
+          border-top: 1px solid rgba(white, 0);
+          border-bottom: 1px solid rgba(white, 0);
+          transition: all 0.2s;
+          @include text-shadow(1px 1px 3px rgba(darken($orange, 30), 0.5));
         }
-        &.active a:before {
-          color: white;
-          border-color: white;
-        }
-        &.active a, &:hover a {
-          @include opacity(1);
+        a:hover {
+          // border-bottom: 1px solid lighten($orange, 8);
+          // border-top: 1px solid lighten($orange, 8);
         }
 
-        & > a {
-          font-size: 20px;   
-          padding: 8px 10px;  
-          display: block; 
-          @include opacity(0.9);
-
-          &:hover {
-            &:before {
-              color: white;
-              border-color: white;
-            }
+        & > li {
+          &.active {        
+            font-weight: bold;
+          }
+          &.active a:before {
+            color: white;
+            border-color: white;
+          }
+          &.active a, &:hover a {
+            @include opacity(1);
           }
 
-          &:before {
-            transition: all 0.2s;
-            content: counter(step);
-            counter-increment: step;
-            display: inline-block;
-            @include border-radius(50%);
-            border: 2px solid white;
-            margin: 0 10px 0 0; position: relative; top: -1px;
-            width: 25px; height: 25px;
-            text-align: center; line-height: 21px;
-            font-size: 16px;
-            @include text-shadow(none);
-
-            color: lighten($orange, 20);
-            border-color: lighten($orange, 20);
-          }
-        }
-        & > ul {
-          margin: 0;
-          padding: 0px 10px 20px 10px;
-          display: none;
-          list-style-type: none;
-
-          & > li > a {        
-            padding: 5px 10px 5px 36px;
-            display: block;
-            font-size: 17px;
-            line-height: 100%;
-            @include box-sizing(border-box);
-            font-weight: normal;
-            border-bottom: 2px solid rgba(white, 0);
+          & > a {
+            font-size: 20px;   
+            padding: 8px 10px;  
+            display: block; 
+            @include opacity(0.9);
 
             &:hover {
-              //border-bottom: 2px solid lighten($orange, 20);
-              text-decoration: underline;
+              &:before {
+                color: white;
+                border-color: white;
+              }
             }
-          }
 
-          & > li.active a {
-            font-weight: bold;
             &:before {
-              //@include arrow-right(white);
-              content: '➜';
-              display: inline-block; margin-right: 4px;
-              margin-left: -19px;
+              transition: all 0.2s;
+              content: counter(step);
+              counter-increment: step;
+              display: inline-block;
+              @include border-radius(50%);
+              border: 2px solid white;
+              margin: 0 10px 0 0; position: relative; top: -1px;
+              width: 25px; height: 25px;
+              text-align: center; line-height: 21px;
+              font-size: 16px;
+              @include text-shadow(none);
+
+              color: lighten($orange, 20);
+              border-color: lighten($orange, 20);
             }
           }
+          & > ul {
+            margin: 0;
+            padding: 0px 10px 20px 10px;
+            display: none;
+            list-style-type: none;
+
+            & > li > a {        
+              padding: 5px 10px 5px 36px;
+              display: block;
+              font-size: 17px;
+              line-height: 100%;
+              @include box-sizing(border-box);
+              font-weight: normal;
+              border-bottom: 2px solid rgba(white, 0);
+
+              &:hover {
+                //border-bottom: 2px solid lighten($orange, 20);
+                text-decoration: underline;
+              }
+            }
+
+            & > li.active a {
+              font-weight: bold;
+              &:before {
+                //@include arrow-right(white);
+                content: '➜';
+                display: inline-block; margin-right: 4px;
+                margin-left: -19px;
+              }
+            }
+          }
+          &.active ul { display: block; }
         }
-        &.active ul { display: block; }
       }
     } // steps
   } // sidebar
 
   .language-selector {
-    margin-top: 30px;
+    margin-top: 24px;
     margin-left: 12px;
   }
 

@@ -5,25 +5,26 @@
 %h2= t("#{current_guide}-guide")
 
 #steps 
-  %ul
-    - unless data[current_guide].nil?
-      - data[current_guide].steps.each do |step|
-        %li{ class: "#{current_step == step[0] ? 'active' : ''}"}
-          - link = step[1].parts ? guide_part_url(current_guide, step[0], step[1].parts.first[0]) : guide_step_url(current_guide, step[0])
-          = link_to t(step[0], default: step[1].title), link
+  .wrapper
+    %ul
+      - unless data[current_guide].nil?
+        - data[current_guide].steps.each do |step|
+          %li{ class: "#{current_step == step[0] ? 'active' : ''}"}
+            - link = step[1].parts ? guide_part_url(current_guide, step[0], step[1].parts.first[0]) : guide_step_url(current_guide, step[0])
+            = link_to t(step[0], default: step[1].title), link
 
-          - if step[1].parts
-            - parts = step[1].parts
-            %ul
-              - parts.each do |part|
-                %li{ class: "#{current_part == part[0] ? 'active' : ''}"}
-                  = link_to t(part[0], default: part[1].title), guide_part_url(current_guide, step[0], part[0])
+            - if step[1].parts
+              - parts = step[1].parts
+              %ul
+                - parts.each do |part|
+                  %li{ class: "#{current_part == part[0] ? 'active' : ''}"}
+                    = link_to t(part[0], default: part[1].title), guide_part_url(current_guide, step[0], part[0])
 
 
-  .language-selector
-    -# In the future this should be replaced with a generalised solution
-    - hebrew_url = current_guide_url(:he)
-    - english_url = current_guide_url(:en)
+    .language-selector
+      -# In the future this should be replaced with a generalised solution
+      - hebrew_url = current_guide_url(:he)
+      - english_url = current_guide_url(:en)
 
-    = link_to 'עב', hebrew_url, class: I18n.locale == :he ? 'active' : ''
-    = link_to 'en', english_url, class: I18n.locale == :en ? 'active' : ''
+      = link_to 'עב', hebrew_url, class: I18n.locale == :he ? 'active' : ''
+      = link_to 'en', english_url, class: I18n.locale == :en ? 'active' : ''

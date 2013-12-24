@@ -19,7 +19,9 @@
 
     = yield
 
-    = javascript_include_tag  "app", "vendor/lightbox-2.6.min"
+    = javascript_include_tag  "app", "vendor/lightbox-2.6.min", "vendor/iscroll-min"
+
+    = yield(:scripts)
 
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

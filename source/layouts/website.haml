@@ -13,5 +13,5 @@
         = link_to 'en', "/en", class: I18n.locale == :en ? 'active' : ''
 
   #content
-    .wrapper
+    .wrapper.clearfix
       = yield
