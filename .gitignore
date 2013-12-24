@@ -17,3 +17,5 @@
 
 .rvmrc
 .ruby-version
+
+*.sublime*
