@@ -1,0 +1,31 @@
+---
+guide: app
+step: create-app
+part: server
+title: הריצי את שרת ה-Rails
+---
+
+שרת ה-Rails הוא מי שאחראי לקרוא את תוכן הקבצים שיש לנו בתיקיית <code>railsgirls</code> ולייצר מהם אפליקצייה. בואי נפעיל אותו כדי שנראה את האתר שהרגע יצרנו. את יכולה להפעיל את השרת על ידי הרצת הפקודה:
+
+<% code("sh") do %>rails server<% end %>
+
+זהו. השרת פועל. גלשי לכתובת [http://localhost:3000](http://localhost:3000) בדפדפן שלך. אם הכל עבד כראוי את אמורה לראות עמוד שהכותרת שלו היא "Welcome aboard". זה אומר שיצירת האפליקצייה החדשה שלנו פעלה כצפוי:
+
+<%=screenshot 'app/app/initial-app.png' %>
+
+שימי לב שה-command prompt כבר אינו נראה בחלון הטרמינל מכיוון שאנחנו מריצים כרגע את שרת ה-Rails. ה-command prompt אמור להראות ככה:
+
+<div class="os-specific">
+  <div class="nix">
+<% code("sh") do %>$<% end %>
+  </div>
+  <div class="win">
+<% code("text") do %>C:\Sites\projects\railsgirls><% end %>
+  </div>
+</div>
+
+כשה-command prompt אינו נראה אינך יכולה להריץ פקודות חדשות בטרמינל. אם תנסי כעת להריץ את הפקודה `cd` או כל פקודה אחרת, זה לא יעבוד. כדי לחזור ל-command prompt הרגיל צריך לכבות את השרת ע"י לחיצה על `CTRL-C` בחלון הטרמינל.
+
+שימי לב שאחרי שכיבית את השרת, אם תנסי לרענן את הדפדפן, זה לא יעבוד. כל עוד השרת אינו רץ לא ניתן לגלוש אל האפליקצייה שבנית.
+
+<%=screenshot 'app/app/server-down.png' %>

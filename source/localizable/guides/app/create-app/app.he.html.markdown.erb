@@ -1,0 +1,24 @@
+---
+guide: app
+step: create-app
+part: app
+title: צרי אפליקציית Rails
+---
+
+כעת נרצה ליצור אפליקציית Rails חדשה בשם <code>railsgirls</code>. נעשה זאת ע"י הרצת הפקודה
+
+<% code("sh") do %>rails new railsgirls<% end %>
+
+זה יקח בערך דקה, ולאחר מכן את תראי משהו כזה:
+
+<%=screenshot 'app/app/create-app.png', 'windows' %>
+
+הפקודה יצרה הרבה תיקיות וקבצים, וכולם נמצאים בתוך תיקייה נוספת בשם <code>railsgirls</code>, לכן נרצה שוב להכנס לתוך התיקייה המתאימה ע"י הרצתה הפקודה:
+
+<% code("sh") do %>cd railsgirls<% end %>
+
+אם תריצי את הפקודה <code>dir</code> בתוך התיקייה שבה את נמצאת עכשיו את אמורה לראות תיקיות כדוגמת <code>app</code> ו- <code>config</code>. הפקודה <code>rails new</code> ייצרה עבורנו את כל התיקיות והקבצים האלו אוטומטית.
+
+<%=screenshot 'app/app/app-dir.png', 'windows' %>
+
+**מאמן/ת:** ודא/י שהמשתתפת מבינה את הפקודות שהרצנו, ובצע/י סקירה של הקבצים החשובים שייצרה הפקודה <code>rails new</code>. 

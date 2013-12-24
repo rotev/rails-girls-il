@@ -1,0 +1,57 @@
+---
+guide: app
+step: create-app
+part: directory
+title: צרי תיקייה עבור האפליקצייה
+---
+
+### חשוב!
+
+חשוב שתבחרי בהוראות המתאימות למערכת ההפעלה שלך - ההוראות שאת צריכה להריץ על Windows מעט שונות מאלו של OS X או Linux. בפינה השמאלית העליונה של חלון זה יש Dropdown שבו תוכלי לבחור את מערכת ההפעלה שלך.
+
+ראשית, בואי נפתח את הטרמינל:
+
+<div class="os-specific">
+  <div class="nix">
+    <p>חפשי את <em>Terminal</em> על שולחן העבודה ולחצי <em>Terminal</em>.</p>
+  </div>
+  <div class="osx">
+    <p>פתחי את Spotlight, הקלידי <em>Terminal</em> ולחצי על אפליקציית ה-<em>Terminal</em>.</p>
+  </div>
+  <div class="windows">    
+    <p>לחצי על Start וחפשי את <em>Command Prompt</em>. לחצי על <em>Command Prompt with Ruby and Rails</em>.</p>
+    <%= screenshot 'app/tools/command-open-windows.png' %>
+  </div>
+</div>
+
+יפתח חלון שחור הנקרא <em>Terminal</em>, או <em>Command Prompt</em>.
+<div class="os-specific">
+  <div class="windows">
+    <%= screenshot 'app/tools/command-windows.png' %>
+  </div>
+</div>
+
+כעת הקלידי לתוך הטרמינל את הפקודה הבאה ולחצי על <em>Enter</em>.
+<% code("sh") do %>mkdir projects<% end %>
+
+הפקודה הזו תיצור תיקייה חדשה על המחשב שלך שנקראת <code>projects</code>.
+
+<div class="os-specific">
+  <div class="nix osx">
+    <p>
+      You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output, like this:
+    </p>
+  </div>
+  <div class="windows">
+    <p>
+      תוכלי לוודא שתיקיית <code>projects</code> אכן נוצרה ע"י הרצת הפקודה <code>dir</code>. את אמורה לראות את תיקיית <code>projects</code> ב-output שהתקבל.
+    </p>  
+    <%= screenshot 'app/app/dir1.png' %>
+  </div>
+</div>
+
+כעת נרצה "להכנס" לתוך תיקיית <code>projects</code>. עושים זאת באמצעות הפקודה <code>cd</code>:
+<% code("sh") do %>cd projects<% end %>
+
+תוכלי לוודא שאת אכן נמצאת בתוך התיקייה הריקה <code>projects</code> ע"י הרצת הפקודה <code class="nix osx">ls</code><code class="windows">dir</code> שוב.
+<%= screenshot 'app/app/dir2.png', 'windows' %>
