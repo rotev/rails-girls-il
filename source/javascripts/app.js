@@ -87,5 +87,11 @@ function init_guides_scroll() {
 
     // $('#sidebar').on('touchmove', function(e){ e.preventDefault(); });
     // var scroller = new IScroll('#steps', {bounce: false});
+
+    $('#toggle-nav').click(function() {
+      $('#sidebar h2').toggle();
+      $('#sidebar #steps').toggle();
+      $('#sidebar .language-selector').toggle();
+    });
   }
 }

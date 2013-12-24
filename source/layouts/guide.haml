@@ -28,12 +28,13 @@
 - wrap_layout :layout do
 
   #sidebar.guide
+    = link_to 'toggle nav', '#', id: 'toggle-nav'
     = partial(:logo)
     = partial(:steps)
 
   #content.guide.clearfix
     %section{ id: data.page.part || data.page.step }
-      %header
+      %header.clearfix
         %h1= data.page.title
 
         #os-selector

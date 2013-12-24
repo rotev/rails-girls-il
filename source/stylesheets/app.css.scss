@@ -192,6 +192,7 @@ body > header {
   #logo {
     margin: 0 auto 25px auto;
   }
+  #toggle-nav { display: none; }
 
   h2 {
     border-top: 1px solid rgba(white, 0.3);    
@@ -394,4 +395,64 @@ body.scrolled #content header {
 .screenshot {
   background: transparent !important;
   padding: 0 !important;
+}
+
+@media all and (max-width: 800px) {
+  #sidebar.guide { 
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+
+    #logo {
+      width: 100px;
+      height: 42px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      display: none;
+    }
+    a { font-size: 16px !important; }
+
+    #toggle-nav {
+      display: block;
+      color: white;
+      float: left;
+    }
+
+    #steps {
+      display: none;
+      height: auto !important;
+    }
+
+    .language-selector {
+      display: none;
+    }
+  }
+  #content.guide { 
+    width: 100%;
+    padding: 10px;
+    margin: 0 !important;
+    section {
+      padding-top: 0;
+      header {
+        left: 0;
+        position: static;
+        padding: 0;
+
+        #os-selector {
+          position: static;
+          display: block;
+        }
+      }
+    }
+  }
+
+  body.scrolled {
+    #content header {
+      @include box-shadow(none);
+    }
+  }
 }
