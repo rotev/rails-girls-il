@@ -3,6 +3,7 @@
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %link{rel: 'shortcut icon', href:'/favicon.png'}/
 
     - if data.page.title
       - title = "#{data.page.title} — Rails Girls Tel-Aviv—Yaffo"
@@ -11,7 +12,7 @@
     %title= title
 
     - if I18n.locale == :en
-      = stylesheet_link_tag "ttp://fonts.googleapis.com/css?family=Cabin:400,600,700"
+      = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cabin:400,600,700"
 
     = stylesheet_link_tag "normalize", "foundation", "app", "lightbox"
 
