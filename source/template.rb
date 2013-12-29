@@ -1,31 +1,7 @@
 # Source: https://github.com/Ben-M/simple_scaffold
-environment 'config.generators.assets = false'
-environment 'config.generators.helper = false'
-environment 'config.generators.test_framework = false'
-environment 'config.generators.jbuilder = false'
-
-if Rails::VERSION::MAJOR>3
-  params="\#{singular_table_name}_params"
-  update_method = "update"
-  strong_params_method = <<-CODE
-
-  private
-  # Only allow a trusted parameter "white list" through.
-  def <%= "\#{singular_table_name}_params" %>
-    <%- if attributes_names.empty? -%>
-    params[<%= ":\#{singular_table_name}" %>]
-    <%- else -%>
-    params.require(<%= ":\#{singular_table_name}" %>).permit(<%= attributes_names.map { |name| ":\#{name}" }.join(', ') %>)
-    <%- end -%>
-  end
-  CODE
-else
-  params = "params[:\#{singular_table_name}]"
-  strong_params_method = nil
-  update_method = "update_attributes"
-end
-
-controller_code = <<-CODE
+def generate_controller(update_method, params, include_white_list_code=false)
+  strong_params_method=white_list_code if include_white_list_code
+  controller_code = <<-CODE
 <% if namespaced? -%>
 require_dependency "<%= namespaced_file_path %>/application_controller"
 
@@ -80,6 +56,33 @@ class <%= controller_class_name %>Controller < ApplicationController
 #{strong_params_method}
 end
 <% end -%>
-CODE
+  CODE
+  file 'lib/templates/rails/scaffold_controller/controller.rb', controller_code
+end
 
-file 'lib/templates/rails/scaffold_controller/controller.rb', controller_code
+def white_list_code
+  <<-CODE
+
+  private
+  # Only allow a trusted parameter "white list" through.
+  def <%= "\#{singular_table_name}_params" %>
+    <%- if attributes_names.empty? -%>
+    params[<%= ":\#{singular_table_name}" %>]
+    <%- else -%>
+    params.require(<%= ":\#{singular_table_name}" %>).permit(<%= attributes_names.map { |name| ":\#{name}" }.join(', ') %>)
+    <%- end -%>
+  end
+  CODE
+end
+
+environment 'config.generators.assets = false'
+environment 'config.generators.helper = false'
+environment 'config.generators.test_framework = false'
+environment 'config.generators.stylesheets = false'
+
+if Rails::VERSION::MAJOR>3
+  environment 'config.generators.jbuilder = false'
+  generate_controller("update", "\#{singular_table_name}_params", true)
+else
+  generate_controller("update_attributes", "params[:\#{singular_table_name}]")
+end
