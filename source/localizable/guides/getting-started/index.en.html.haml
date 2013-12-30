@@ -5,18 +5,20 @@ title: Getting started
 ---
 
 %p So you're attending our workshop, huh? That's great! Here is what you need to do:
-%ol
-  %li
-    Install the required software on your laptop using this guide:
-    = link_to 'Install', 'http://guides.railsgirls.com/install', target: '_blank'
-  %li
-    Play with the "Try Ruby" tutorial here:
-    = link_to 'TryRuby', 'http://tryruby.org', target: '_blank'
-    \.
-    You don't have to finish it. Working on it for half an hour is enough.
-  %li
-    During the workshop we'll build a Rails app from scratch using this guide:
-    = link_to 'App guide', guide_url('app')
+%table.table
+  %tr
+    %td 
+      = link_to 'Install', 'http://guides.railsgirls.com/install', class: 'button small radius', target: '_blank'
+    %td Install the required software on your laptop using this guide.
+  %tr
+    %td 
+      = link_to 'TryRuby', 'http://tryruby.org', class: 'button small radius', target: '_blank'
+    %td 
+      Play with the "Try Ruby" tutorial. You don't have to finish it. Working on it for half an hour is enough.
+  %tr
+    %td= link_to 'App guide', guide_url('app'), class: 'button small radius'
+    %td During the workshop we'll build a Rails app from scratch using this guide.
+
 
 %p If you were quick enough to finish everything you can continue improving your app using the following guides:
 %ul

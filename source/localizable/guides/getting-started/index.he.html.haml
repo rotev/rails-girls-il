@@ -5,18 +5,21 @@ title: איך מתחילים?
 ---
 
 %p אז את משתתפת בסדנה שלנו, הא? איזה יופי! זה מה שאת צריכה לעשות:
-%ol
-  %li
-    התקיני את התוכנה הדרושה על הלפטופ שלך באמצעות 
-    = link_to 'מדריך ההתקנה', 'http://guides.railsgirls.co.il/install', target: '_blank'
-  %li
-    שחקי קצת עם הטוטוריאל של "Try Ruby" כאן:
-    = link_to 'TryRuby', 'http://tryruby.org', target: '_blank'
-    \.
-    את לא צריכה לסיים את כולו. מספיק שתעבדי עליו חצי שעה.
-  %li
-    בזמן הסדנה אנחנו נבנה ביחד אפליקציית Rails מאפס באמצעות
-    = link_to 'מדריך האפליקצייה', guide_url('app')
+
+%table.table
+  %tr
+    %td= link_to 'מדריך ההתקנה', 'http://guides.railsgirls.co.il/install', class: 'button small radius', target: '_blank'
+    %td התקיני את התוכנה הדרושה על הלפטופ שלך באמצעות מדריך ההתקנה.
+
+  %tr
+    %td= link_to 'TryRuby', 'http://tryruby.org', class: 'button small radius', target: '_blank'
+    
+    %td שחקי קצת עם הטוטוריאל של "Try Ruby". את לא צריכה לסיים את כולו. מספיק שתעבדי עליו חצי שעה.
+
+  %tr
+    %td= link_to 'מדריך האפליקצייה', guide_url('app'), class: 'button small radius'
+    %td בזמן הסדנה אנחנו נבנה ביחד אפליקציית Rails מאפס באמצעות מדריך האפליקצייה.
+    
 
 %p אם היית מהירה מספיק בשביל לסיים הכל לפני שהסדנה הסתיימה, את מוזמנת להמשיך ולשפר את האפליקצייה שבנית באמצעות המדריכים האלו:
 %ul
