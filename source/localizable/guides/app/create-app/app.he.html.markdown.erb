@@ -9,20 +9,22 @@ title: צרי אפליקציית Rails
 
 <% code("sh") do %>rails new railsgirls -m http://railsgirls.co.il/template.rb<% end %>
 
-<code>rails new railsgirls</code> זוהי פקודה שיוצרת פרוייקט חדש בשם railsgirls עם כל הקבצים שהאפליקציה שלנו תצטרך
+<code>rails new railsgirls</code> זוהי פקודה שיוצרת פרוייקט חדש בשם railsgirls עם כל הקבצים שהאפליקציה שלנו תצטרך.
 
-<code>-m http://railsgirls.co.il/template.rb</code>זוהי פקודה שאומרת לריילז להוריד תבנית מיוחדת מ-railsgirls.co.il שגורמת לקבצים להיות קצת יותר פשוטים וקלים להבנה עבור מתכנתים מתחילים
+<code>-m http://railsgirls.co.il/template.rb</code> זוהי פקודה שאומרת לריילז להוריד תבנית מיוחדת מ-railsgirls.co.il שגורמת לקבצים להיות קצת יותר פשוטים וקלים להבנה עבור מתכנתים מתחילים.
 
 זה יקח בערך דקה, ולאחר מכן את תראי משהו כזה:
 
 <%=screenshot 'app/app/create-app.png', 'windows' %>
+<%=screenshot 'app/app/create-app-nix.png', 'nix osx' %>
 
 הפקודה יצרה הרבה תיקיות וקבצים, וכולם נמצאים בתוך תיקייה נוספת בשם <code>railsgirls</code>, לכן נרצה שוב להכנס לתוך התיקייה המתאימה ע"י הרצתה הפקודה:
 
 <% code("sh") do %>cd railsgirls<% end %>
 
-אם תריצי את הפקודה <code>dir</code> בתוך התיקייה שבה את נמצאת עכשיו את אמורה לראות תיקיות כדוגמת <code>app</code> ו- <code>config</code>. הפקודה <code>rails new</code> ייצרה עבורנו את כל התיקיות והקבצים האלו אוטומטית.
+אם תריצי את הפקודה <code class="windows">dir</code><code class="nix osx">ls</code> בתוך התיקייה שבה את נמצאת עכשיו את אמורה לראות תיקיות כדוגמת <code>app</code> ו- <code>config</code>. הפקודה <code>rails new</code> ייצרה עבורנו את כל התיקיות והקבצים האלו אוטומטית.
 
 <%=screenshot 'app/app/app-dir.png', 'windows' %>
+<%=screenshot 'app/app/app-dir-nix.png', 'nix osx' %>
 
 **מאמן/ת:** הסבר/הסבירי מה כל פקודה עושה. מה ג’ונרט? מה עושה השרת? 

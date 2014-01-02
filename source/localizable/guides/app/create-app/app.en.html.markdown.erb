@@ -16,13 +16,15 @@ Now you want to create a new app called <code>railsgirls</code> by running:
 It will take a minute or so, and after that you'll see something like this:
 
 <%=screenshot 'app/app/create-app.png', 'windows' %>
+<%=screenshot 'app/app/create-app-nix.png', 'nix osx' %>
 
 This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:
 
 <% code("sh") do %>cd railsgirls<% end %>
 
-If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. The <code>rails new</code> command automatically created all these folders and files for us.
+If you run <code class="windows">dir</code><code class="nix osx">ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. The <code>rails new</code> command automatically created all these folders and files for us.
 
 <%=screenshot 'app/app/app-dir.png', 'windows' %>
+<%=screenshot 'app/app/app-dir-nix.png', 'nix osx' %>
 
 **Coach:** Explain what each command does. What was generated? What does the server do?
