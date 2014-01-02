@@ -369,6 +369,13 @@ body.scrolled #content header {
         text-decoration: none;
       }
     }
+
+    &.credit {
+      font-style: italic;
+      a {
+        text-decoration: none;
+      }
+    }
   }
 
   img {
