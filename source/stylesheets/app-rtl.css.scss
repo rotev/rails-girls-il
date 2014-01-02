@@ -107,6 +107,10 @@ code {
   float: left !important;
 }
 
+ul {
+  margin-right: 1.1rem;
+}
+
 .index {
   .welcome {
     background-image: url(/images/cover_flip.jpg);
@@ -123,4 +127,9 @@ code {
   #photos {
     float: left;
   }
+}
+
+#facebook_button {
+  margin-left: 5px !important;
+  margin-right: 0 !important;
 }

@@ -403,6 +403,12 @@ body.scrolled #content header {
   padding: 0 !important;
 }
 
+#facebook_button {
+  text-decoration: none !important;
+  background: #4c66a4;
+  margin-right: 5px !important;
+}
+
 @media all and (max-width: 800px) {
   #sidebar.guide { 
     position: static;
