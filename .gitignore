@@ -20,5 +20,6 @@
 
 *.sublime*
 
+
 # Intellij/RubyMine conf file
 .idea
