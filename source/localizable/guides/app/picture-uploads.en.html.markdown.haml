@@ -20,10 +20,9 @@ add
   - code("sh") do
     gem 'carrierwave'
 
-**Coach:** Explain what libraries are and why they are useful. Describe what open source software is.
+**Coach:** Explain what libraries are and why they are useful. Describe what open source software is. <br><br>
 
-In the terminal run:
-
+Hit `CTRL-C` in the terminal to quit the server. Once it has stopped, in the terminal run:
 
 = preserve do 
   - code("sh") do
@@ -36,9 +35,11 @@ Now we can generate the code for handling uploads. In the terminal run:
   - code("sh") do
     rails generate uploader Picture
 
-At this point you need to **restart the Rails server process** in the terminal.
+At this point you need to **start the Rails server process** in the terminal.
 
-Hit `CTRL-C` in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
+= preserve do
+  - code("sh") do
+    rails server
 
 This is needed for the app to load the added library.
 
