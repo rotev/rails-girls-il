@@ -19,3 +19,6 @@
 .ruby-version
 
 *.sublime*
+
+# Intellij/RubyMine conf file
+.idea
