@@ -21,6 +21,7 @@ body {
   font-family: 'Cabin', sans-serif;
   line-height: 150%;
   overflow-y: scroll;
+  padding-bottom: 100px;
 }
 
 // os-specific
@@ -109,16 +110,19 @@ body > header {
 }
 
 .welcome {
-  background: url(/images/cover.jpg) no-repeat;
+  background: url(/images/cover.jpg) left bottom no-repeat;
   background-size: 100%;
-  height: 400px;
+  height: 350px;
+  @include box-sizing(border-box);
+  padding-top: 52px;
+  margin-bottom: 50px;
 
   p {
     width: 50%;
     float: right;
   }
   p:first-child {
-    font-size: 35px; line-height: 50px;
+    font-size: 27px; line-height: 42px;
   }
 
   p:nth-child(2) {
@@ -135,6 +139,7 @@ body > header {
 
     h1 {
       margin-bottom: 34px;
+      font-size: 35px;
     }
 
     article {
@@ -155,9 +160,10 @@ body > header {
   }
 
   #photos {
-    width: 50%;
+    width: 50%; height: 350px;
     float: right;
     position: relative;
+    margin-top: 13px;
 
     a {
       width: 100%;
@@ -332,6 +338,7 @@ body.scrolled #content header {
       background: rgba(white, 0.95);
       left: 300px; right: 0;
       padding: 25px 50px 20px 50px;
+      z-index: 100;
       @include transition(box-shadow 0.2s);
 
       h1 {

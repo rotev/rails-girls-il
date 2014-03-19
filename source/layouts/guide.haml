@@ -3,27 +3,28 @@
 - next_part = nil
 - next_step = nil
 - next_link = nil
-- guide = "app"
+- guide = current_page.data.guide
 
-- data.app.steps.each do |step|
-  - if current_step
-    - next_step = step
-    - unless next_link
-      - if next_step[1].parts
-        - next_link = "#{next_step[0]}/#{next_step[1].parts.first[0]}.html"
-      - else
-        - next_link = "#{next_step[0]}.html"
-    - break
-  - if step[0] == data.page.step
-    - current_step = step
-    - if step[1].parts
-      - step[1].parts.each do |part|
-        - if current_part
-          - next_part = part
-          - next_link = "#{current_step[0]}/#{next_part[0]}.html"
-          - break
-        - if part[0] == data.page.part
-          - current_part = part
+- if data[guide]
+  - data[guide].steps.each do |step|
+    - if current_step
+      - next_step = step
+      - unless next_link
+        - if next_step[1].parts
+          - next_link = "#{next_step[0]}/#{next_step[1].parts.first[0]}.html"
+        - else
+          - next_link = "#{next_step[0]}.html"
+      - break
+    - if step[0] == data.page.step
+      - current_step = step
+      - if step[1].parts
+        - step[1].parts.each do |part|
+          - if current_part
+            - next_part = part
+            - next_link = "#{current_step[0]}/#{next_part[0]}.html"
+            - break
+          - if part[0] == data.page.part
+            - current_part = part
 
 - wrap_layout :layout do
 

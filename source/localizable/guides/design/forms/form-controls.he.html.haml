@@ -1,0 +1,50 @@
+---
+guide: design
+step: forms
+part: form-controls
+title: עיצוב הטפסים באתר
+---
+
+%p
+  פתחי את הקובץ
+  %code app/views/ideas/_form.html.erb
+  והחליפי את השורה:
+
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_field :name %>
+
+%p בשורה:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_field :name, class: 'form-control' %>
+
+%p ואת השורה:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_area :description %>
+
+%p החליפי בשורה:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_area :description, class: 'form-control' %>
+
+%p
+  רפרשי את העמוד ושימי לב לשינויים. תיבות הטקסט נהיו יפות יותר. שימי לב שכאשר את מסמנת את אחת התיבות היא מקבלת הילה כחולה מסביבה.
+
+%p
+  כל השדות מאוד צמודים אחד לשני. אם נרווח אותם העמוד יראה מסודר יותר ויפה יותר.
+  בקובץ ה-CSS שלנו 
+  %code app/assets/stylesheets/application.css
+  הוסיפי את הקוד הבא:
+
+= preserve do
+  - code("css") do
+    :plain
+      .field {
+        margin-bottom: 20px;
+      }

@@ -1,0 +1,29 @@
+---
+guide: design
+step: list-page
+part: table
+title: Design the ideas table
+---
+
+%p
+  =link_to 'The Bootstrap documentation', 'http://getbootstrap.com/css/#tables', target: '_blank'
+  will teach you how to use the library to style tables in various ways.
+
+%p
+  Open the file
+  %code app/views/ideas/index.html.erb 
+  and replace the line:
+
+= preserve do 
+  - code("erb") do
+    <table>
+
+%p with this line:
+
+= preserve do 
+  - code("erb") do
+    <table class="table table-striped">
+
+%p
+  Refresh the ideas page and notice how this small change made the ideas table look much better.
+  All of this is thanks to the Bootstrap library, which you already added to your application at the beginning of the workshop.

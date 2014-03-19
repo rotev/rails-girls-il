@@ -8,6 +8,10 @@ en:
   # guide names
   app-guide: App Guide
   getting-started-guide: Starter Guide
+  design-guide: Design your app
+
+  # continue button
+  continue: continue
 
   # app guide steps and parts
   introduction: Introduction
@@ -37,4 +41,19 @@ en:
   nav_and_footer: Add a nav bar and a footer
   css: Refine with some CSS
 
-  continue: continue
+  # design guide steps and parts
+  list-page: Ideas Page
+  font-and-background: Font and Background
+  forms: Forms
+  
+  table: Table
+  buttons: Buttons
+  icons: Icons
+  rounded-pictures: Rounded Thumbnails
+  css-finetunes: CSS Finetunes
+
+  font: Fonts
+  background: Background Image
+
+  form-controls: Text Boxes
+  alert: Alerts

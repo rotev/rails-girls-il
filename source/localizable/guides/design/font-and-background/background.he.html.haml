@@ -1,0 +1,47 @@
+---
+guide: design
+step: font-and-background
+part: background
+title: הוסיפי תמונת רקע עדינה
+---
+
+%p
+  הורידי את
+  =link_to 'התמונה הזאת', '/images/design/light_grey.png'
+  למחשב שלך ושמרי אותה בתיקייה
+  %code app/assets/images
+  של האפליקצייה שלך.
+
+%p
+  בקובץ ה-CSS של האפליקצייה
+  %code app/assets/stylesheets/application.css
+  החליפי את הקוד:
+
+
+= preserve do 
+  - code("css") do
+    :plain
+      body { 
+        padding-top: 80px; 
+        font-family: Arvo; 
+      }    
+
+%p בקוד:
+
+= preserve do 
+  - code("css") do
+    :plain
+      body { 
+        padding-top: 80px; 
+        font-family: Arvo; 
+        background-image: url(/assets/light_grey.png); 
+      }          
+
+
+%p רפרשי את העמוד ושימי לב לתמונת הרקע שהתווספה. יפה?
+
+%p
+  באתר
+  =link_to 'Subtle Patterns', 'http://subtlepatterns.com/', target: '_blank'
+  תוכלי למצוא מגוון של תמונות רקע עדינות שאפשר להוסיף לאפליקצייה. 
+  שימי לב שבגלל צבעי הטבלה ובר הניווט כדאי להשתמש בתמונה בהירה יחסית. 

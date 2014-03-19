@@ -1,0 +1,66 @@
+---
+guide: design
+step: list-page
+part: buttons
+title: כפתורים מעוצבים
+---
+
+%p
+  =link_to 'בדוקומנטציה של Bootstrap', 'http://getbootstrap.com/css/#buttons', target: '_blank'
+  תוכלי ללמוד איך ליצור כפתורים מעוצבים בסגנונות שונים.
+
+%p באותו הקובץ, החליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <td class="buttons"><%= link_to 'Show', idea %></td>
+
+%p בשורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Show', idea, class: 'btn btn-default' %></td>
+
+%p רפרשי את העמוד ושימי לב איך הלינק Show הפשוט הפך לכפתור מעוצב. נעשה את אותו דבר גם לכפתור Edit. את השורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+
+%p החליפי בשורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea), class: 'btn btn-default' %></td>
+
+%p רפרשי שוב ושימי לב שכפתור Edit וכפתור Show נראים כעת אותו הדבר.
+%p 
+  את כפתור Destroy נעצב מעט אחרת, ונשתמש במחלקה 
+  %code btn-danger
+  כדי לסמן שזו פעולה מסוכנת. החליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+%p
+  בשורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+
+%p הכפתור האחרון שנעצב הוא הכפתור 'New Idea'. אותו נרצה לעשות קצת יותר גדול. את השורה:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path %>
+
+%p החליפי בשורה:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path, class: 'btn btn-primary btn-lg' %>
+
+%p
+  רפרשי את העמוד שוב ושימי לב לשינויים.

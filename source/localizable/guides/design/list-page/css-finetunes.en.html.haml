@@ -1,0 +1,56 @@
+---
+guide: design
+step: list-page
+part: css-finetunes
+title: CSS Finetunes
+---
+
+%p A few CSS changes will improve your ideas page event further!
+
+%h3 Make the buttons columns widths smaller
+
+%p 
+  Add a CSS class named 
+  %code buttons
+  to all three 
+  %code td
+  tags that contain buttons.
+
+%p 
+  Open the file 
+  %code app/assets/stylesheets/application.css
+  and add this code at the end:
+
+= preserve do 
+  - code("css") do
+    :plain
+      td.buttons {
+        width: 70px;
+      }
+
+%p
+  Refresh the page, and notice that this change made the three right most columns smaller.
+
+%h3 Centralize the page title
+
+%p 
+  The spacing above the page title is too large, and the spacing below it is too small. If we balance the top and bottom spacing it will look better.
+  In the same CSS file replace the line:
+
+= preserve do
+  - code("css") do
+    body { padding-top: 100px; }
+
+%p with the line:
+
+= preserve do
+  - code("css") do
+    body { padding-top: 80px; }
+
+%p To add spacing below the page title add this CSS code at the bottom of the same file:
+
+= preserve do
+  - code("css") do
+    h1 { margin-bottom: 30px; }
+
+%p Refresh the page and notice the change.

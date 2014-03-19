@@ -1,0 +1,47 @@
+---
+guide: design
+step: font-and-background
+part: background
+title: Add a subtle background image
+---
+
+%p
+  Donwload
+  =link_to 'this image', '/images/design/light_grey.png'
+  to your computer and save it inside the 
+  %code app/assets/images
+  folder in your application.
+
+%p
+  In the application CSS file
+  %code app/assets/stylesheets/application.css
+  replace this code:
+
+
+= preserve do 
+  - code("css") do
+    :plain
+      body { 
+        padding-top: 80px; 
+        font-family: Arvo; 
+      }    
+
+%p with this code:
+
+= preserve do 
+  - code("css") do
+    :plain
+      body { 
+        padding-top: 80px; 
+        font-family: Arvo; 
+        background-image: url(/assets/light_grey.png); 
+      }          
+
+
+%p Refresh the page and notice the new background pattern. Do you like it?
+
+%p
+  You can find more patterns to add to your application in the website
+  =link_to 'Subtle Patterns', 'http://subtlepatterns.com/', target: '_blank'
+  \.
+  Note that since we're using a light grey table color and navigation bar background, the pattern that you choose should be relatively light.

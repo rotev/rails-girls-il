@@ -1,0 +1,88 @@
+---
+guide: design
+step: list-page
+part: icons
+title: הוסיפי אייקונים לכפתורים
+---
+
+%p
+  =link_to 'בדוקומנטציה של Bootstrap', 'http://getbootstrap.com/components/#glyphicons', target: '_blank'
+  תוכלי ללמוד כיצד להוסיף אייקונים מוכנים מראש לאפליקצייה שלך. בשלב הזה נוסיף אייקונים לכפתורים שעיצבנו קודם.
+
+%h3 אייקון זכוכית מגדלת לכפתור Show
+
+%p החליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Show', idea, class: 'btn btn-default' %></td>
+
+%p בקוד:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to idea, class: 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-search"></span>
+          Show
+        <% end %>
+      </td>
+
+
+%h3 אייקון עיפרון לכפתור Edit
+
+%p החליפי את השורה:
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+
+%p בקוד:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to edit_idea_path(idea), class: 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+        <% end %>
+      </td>
+
+%h3 אייקון איקס לכפתור Destroy
+
+%p החליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+%p בקוד:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to idea, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
+          <span class="glyphicon glyphicon-remove"></span>
+          Destroy
+        <% end %>
+      </td>
+
+
+%h3 אייקון פלוס לכפתור New Idea
+
+%p החליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path, class: 'btn btn-primary btn-lg' %>
+
+%p בקוד:
+= preserve do 
+  - code("erb") do
+    :plain
+      <%= link_to new_idea_path, class: 'btn btn-primary btn-lg' do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        New Idea
+      <% end %>      
+
+
+%p רפרשי את העמוד ושימי לב לאייקונים התווספו לארבעת הכפתורים.

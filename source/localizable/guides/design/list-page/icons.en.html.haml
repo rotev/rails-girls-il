@@ -1,0 +1,88 @@
+---
+guide: design
+step: list-page
+part: icons
+title: Add icons to the buttons
+---
+
+%p
+  =link_to 'The Bootstrap documentation', 'http://getbootstrap.com/components/#glyphicons', target: '_blank'
+  will teach you how to add premade icons to your application. In this step we'll add icons to the buttons we created in the previous step.
+
+%h3 A magnifying glass icon for the Show button
+
+%p Replace the line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Show', idea, class: 'btn btn-default' %></td>
+
+%p with this code:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to idea, class: 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-search"></span>
+          Show
+        <% end %>
+      </td>
+
+
+%h3 A pencil icon for the Edit button
+
+%p Replace this line:
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+
+%p with this code:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to edit_idea_path(idea), class: 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+        <% end %>
+      </td>
+
+%h3 An X icon for the Destroy button
+
+%p Replace this line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+%p with this code:
+= preserve do 
+  - code("erb") do
+    :plain
+      <td>
+        <%= link_to idea, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
+          <span class="glyphicon glyphicon-remove"></span>
+          Destroy
+        <% end %>
+      </td>
+
+
+%h3 A plus icon for the New Idea button
+
+%p Replace this line:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path, class: 'btn btn-primary btn-lg' %>
+
+%p with this code:
+= preserve do 
+  - code("erb") do
+    :plain
+      <%= link_to new_idea_path, class: 'btn btn-primary btn-lg' do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        New Idea
+      <% end %>      
+
+
+%p Refresh the page and notice the icons that were added to the buttons.

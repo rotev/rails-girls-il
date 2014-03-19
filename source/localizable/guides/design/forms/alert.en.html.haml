@@ -1,0 +1,43 @@
+---
+guide: design
+step: forms
+part: alert
+title: Style alerts
+---
+
+%p
+  If you edit an idea and click the 
+  %code Update Idea
+  button, you'll be redirected back to the idea page and a success message will show up: "Idea was successfully updated.".
+  Let's give it a better style.
+
+%p
+  Read about 
+  =link_to 'Alerts', 'http://getbootstrap.com/components/#alerts', target: '_blank'
+  in the Bootstrap documentation.
+
+%p
+  Open the file 
+  %code app/views/ideas/show.html.erb
+  and replace the line:
+
+= preserve do
+  - code("erb") do
+    <p id="notice"><%= notice %></p>
+
+%p with this code:
+
+= preserve do
+  - code("erb") do
+    :plain
+      <% if notice %>
+        <p id="notice" class="alert alert-success">
+          <%= notice %>
+        </p>
+      <% end %>
+
+%p
+  Now edit and save an idea again, and notice the styled message after it's updated.
+
+%p
+  That's it! Feel free to style your application even further!

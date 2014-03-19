@@ -1,0 +1,39 @@
+---
+guide: design
+step: forms
+part: alert
+title: עיצוב הודעות
+---
+
+%p
+  אם תערכי רעיון ותלחצי על הכפתור 
+  %code Update Idea
+  תגיעי חזרה לעמוד הרעיון ובראשו תוצג הודעת הצלחה "Idea was successfully updated.".
+
+%p
+  קראי על 
+  =link_to 'Alerts', 'http://getbootstrap.com/components/#alerts', target: '_blank'
+  בדוקומנטציה של Bootstrap.
+
+%p
+  פתחי את הקובץ 
+  %code app/views/ideas/show.html.erb
+  והחליפי את הקוד:
+
+= preserve do
+  - code("erb") do
+    <p id="notice"><%= notice %></p>
+
+%p בקוד:
+
+= preserve do
+  - code("erb") do
+    :plain
+      <% if notice %>
+        <p id="notice" class="alert alert-success">
+          <%= notice %>
+        </p>
+      <% end %>
+
+%p
+  כעת ערכי ושמרי רעיון שוב ושימי לב להודעה המעוצבת המוצגת לאחר העדכון.

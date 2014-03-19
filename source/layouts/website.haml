@@ -6,7 +6,7 @@
 
       %nav
         = link_to t('getting-started'), guide_url('getting-started')
-        /= link_to t('workshops'), localized_url('workshops')
+        /= link_to t('workshops'), localized_url('workshops')        
 
       .language-selector
         = link_to 'עב', "/", class: I18n.locale == :he ? 'active' : ''

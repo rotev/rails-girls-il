@@ -1,0 +1,51 @@
+---
+guide: design
+step: forms
+part: form-controls
+title: Style the forms
+---
+
+%p
+  Open the file
+  %code app/views/ideas/_form.html.erb
+  and replace the line:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_field :name %>
+
+%p with the line:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_field :name, class: 'form-control' %>
+
+%p and the line:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_area :description %>
+
+%p replace with this line:
+
+= preserve do 
+  - code("erb") do
+    <%= f.text_area :description, class: 'form-control' %>
+
+%p
+  Refresh the page and notice the changes. The text boxes now look a little better. Notice that when you focus your mouse on one of the text boxes blue border shows around it.
+
+%p
+  All the form fields are very close to one another. If we add some spacing between them it will look better.
+  In our CSS file 
+  %code app/assets/stylesheets/application.css
+  add the following code:
+
+= preserve do
+  - code("css") do
+    :plain
+      .field {
+        margin-bottom: 20px;
+      }
+
+%p How does it look now?

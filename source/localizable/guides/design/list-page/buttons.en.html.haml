@@ -1,0 +1,66 @@
+---
+guide: design
+step: list-page
+part: buttons
+title: Design the buttons
+---
+
+%p
+  =link_to 'The Bootstrap documentation', 'http://getbootstrap.com/css/#buttons', target: '_blank'
+  will teach you how style buttons.
+
+%p In the same file, replace the line:
+
+= preserve do 
+  - code("erb") do
+    <td class="buttons"><%= link_to 'Show', idea %></td>
+
+%p with this line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Show', idea, class: 'btn btn-default' %></td>
+
+%p Refresh the page and notice that the Show link now looks like a button. We'll do the same for the Edit button. Replace the line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+
+%p with this line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to 'Edit', edit_idea_path(idea), class: 'btn btn-default' %></td>
+
+%p Refresh the page and notice that the Edit link and the Show link now look the same.
+%p 
+  We'll want to style the Destroy link a bit differently, so we'll use the 
+  %code btn-danger
+  class to mark that this is a dangerous action. Replace the line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+%p
+  with this line:
+
+= preserve do 
+  - code("erb") do
+    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+
+%p The last button we'll style is the 'New Idea' button. We'll want to make it a little bit bigger. Replace the line:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path %>
+
+%p with this line:
+
+= preserve do 
+  - code("erb") do
+    <%= link_to 'New Idea', new_idea_path, class: 'btn btn-primary btn-lg' %>
+
+%p
+  Refresh the page and notice the changes.

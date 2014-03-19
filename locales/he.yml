@@ -8,6 +8,10 @@ he:
   # guide names
   app-guide: מדריך האפליקצייה
   getting-started-guide: מדריך ההתחלה
+  design-guide: עצבי את האפליקצייה
+
+  # continue button
+  continue: המשיכי
 
   # app guide steps and parts
   introduction: הקדמה
@@ -37,4 +41,19 @@ he:
   nav_and_footer: הוסיפי תפריט ניווט ו-footer
   css: עדני את העיצוב עם קצת CSS
 
-  continue: המשיכי
+  # design guide steps and parts
+  list-page: עמוד הרעיונות
+  font-and-background: פונט ותמונת רקע
+  forms: טפסים
+
+  table: טבלה
+  buttons: כפתורים
+  icons: אייקונים
+  rounded-pictures: תמונות מעוגלות
+  css-finetunes: CSS Finetunes
+
+  font: פונט
+  background: תמונת רקע
+
+  form-controls: תיבות טקסט
+  alert: הודעות

@@ -1,0 +1,28 @@
+---
+guide: design
+step: list-page
+part: table
+title: טבלת רעיונות מעוצבת
+---
+
+%p
+  =link_to 'בדוקומנטציה של Bootstrap', 'http://getbootstrap.com/css/#tables', target: '_blank'
+  תוכלי ללמוד איך להשתמש בספרייה כדי לעצב טבלאות בסגנונות שונים.
+
+%p
+  פתחי את הקובץ
+  %code app/views/ideas/index.html.erb 
+  והחליפי את השורה:
+
+= preserve do 
+  - code("erb") do
+    <table>
+
+%p בשורה:
+
+= preserve do 
+  - code("erb") do
+    <table class="table table-striped">
+
+%p
+  רפרשי את עמוד הרעיונות ושימי לב איך השינוי הקטן הזה גרם לטבלת הרעיונות להראות הרבה יותר טוב. כל זה בזכות ספריית Bootstrap שהוספת לאפליקצייה כבר בתחילת הסדנה.

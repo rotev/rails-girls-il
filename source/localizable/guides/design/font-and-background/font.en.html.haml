@@ -1,0 +1,46 @@
+---
+guide: design
+step: font-and-background
+part: font
+title: Use a special font
+---
+
+%p 
+  =link_to 'Google Fonts', 'https://www.google.com/fonts'
+  contains a collection of special fonts that can be added to any website for free. In this step we'll add a font called Arvo to your application.
+
+%p 
+  Open the file 
+  %code app/views/layouts/application.html.erb
+  and below the line:
+
+= preserve do 
+  - code("erb") do
+    <link href='http://railsgirls.co.il/bootstrap/css/bootstrap-theme.css' rel='stylesheet'>
+
+%p add this line:
+
+= preserve do 
+  - code("erb") do
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+%p
+  In our CSS file
+  %code app/assets/stylesheets/application.css
+  replace the line:
+
+= preserve do 
+  - code("css") do
+    body { padding-top: 80px; }
+
+%p with this code:
+
+= preserve do 
+  - code("css") do
+    :plain
+      body { 
+        padding-top: 80px; 
+        font-family: Arvo; 
+      }    
+
+%p Refresh the page and notice that the font has changed.

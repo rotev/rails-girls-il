@@ -1,0 +1,56 @@
+---
+guide: design
+step: list-page
+part: css-finetunes
+title: CSS Finetunes
+---
+
+%p כמה שינויים קלים ב-CSS ישפרו את עמוד הרעיונות שלך אפילו יותר!
+
+%h3 צמצום הרוחב של עמודות הכפתורים
+
+%p 
+  הוסיפי מחלקת CSS בשם
+  %code buttons
+  לשלוש תגיות ה-
+  %code td
+  שמכילות בתוכן כפתורים.
+
+%p 
+  פתחי את הקובץ 
+  %code app/assets/stylesheets/application.css
+  והוסיפי את הקוד הבא בסופו:
+
+= preserve do 
+  - code("css") do
+    :plain
+      td.buttons {
+        width: 70px;
+      }
+
+%p
+  רפרשי את העמוד, ושימי לב שהשינוי הזה גרם לשלוש העמודות הימניות להיות קטנות יותר.
+
+%h3 מירכוז כותרת העמוד
+
+%p 
+  הריווח שמעל כותרת העמוד גדול מדי, והריווח שמתחת לכותרת העמוד קטן מדי. אם נאזן את הריווחים מלמעלה ומלמטה העיצוב יראה מסודר יותר ויפה יותר.
+  באותו קובץ CSS החליפי את השורה:
+
+= preserve do
+  - code("css") do
+    body { padding-top: 100px; }
+
+%p בשורה:
+
+= preserve do
+  - code("css") do
+    body { padding-top: 80px; }
+
+%p כדי להוסיף ריווח מתחת לכותרת העמוד, הוסיפי באותו קובץ CSS את הקוד הבא:
+
+= preserve do
+  - code("css") do
+    h1 { margin-bottom: 30px; }
+
+%p רפרשי את העמוד ושימי לב לשינוי.
