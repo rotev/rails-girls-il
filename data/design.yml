@@ -14,8 +14,8 @@ steps:
         title: Icons
       rounded-pictures:
         title: Rounded Pictures
-      css-finetunes:
-        title: CSS Finetune
+      css-fine-tuning:
+        title: CSS Fine Tuning
 
   font-and-background:
     title: פונט ותמונת רקע
