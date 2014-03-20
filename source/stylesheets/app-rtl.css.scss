@@ -35,6 +35,18 @@ body > header {
   }  
   nav {
     float: right;
+
+    & > ul {
+      & > li {
+        ul {
+          left: auto; right: 0;
+        }
+
+        &.has-dropdown > a::after {
+          left: auto; right: 3px;
+        }
+      }
+    }
   }
 }
 

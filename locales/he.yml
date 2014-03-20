@@ -5,6 +5,19 @@ he:
   getting-started: התחילי כאן!
   workshops: סדנאות
 
+  guides: מדריכים
+  installation-guide: מדריך ההתקנה
+  tryruby-tutorial: TryRuby tutorial
+  app-guide: מדריך ההתקנה
+  image-resizing-guide: מדריך resize לתמונות
+  design-guide: מדריך עיצוב
+  commenting-guide: מדריך הוספת תגובות
+  heroku-guide: מדריך העלאה ל-Heroku
+  authentication-guide: מדריך אותנטיקציה
+  github-guide: מדריך העלאה ל-Github
+
+  contact: צרי קשר
+
   # guide names
   app-guide: מדריך האפליקצייה
   getting-started-guide: מדריך ההתחלה

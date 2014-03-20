@@ -106,6 +106,14 @@ helpers do
   def current_guide_url(locale=nil)
     guide_part_url(data.page.guide, data.page.step, data.page.part, locale)
   end
+
+  def external_guide_url(guide)
+    if I18n.locale == :en
+      "http://guides.railsgirls.com/#{guide}/"
+    else
+      "http://guides.railsgirls.co.il/#{guide}/"
+    end
+  end
 end
 
 page "*", layout: :website

@@ -24,6 +24,20 @@ body {
   padding-bottom: 100px;
 }
 
+
+// fork me on Github
+#fork {
+  position: absolute; top: 0; left: 0; border: 0;
+  @include opacity(0.5);
+  &:hover {
+    @include opacity(1);
+  }
+}
+@media all and (max-width: 1200px) {
+  #fork { display: none; }
+}
+
+
 // os-specific
 .windows, .nix, .osx { display: none; }
 body.os-windows .windows { display: inline-block; }
@@ -89,6 +103,67 @@ body > header {
   nav {
     float: left;
     padding: 18px 50px 20px 50px;
+
+    ul {
+      margin: 0;
+      list-style-type: none;
+    }
+
+    & > ul {
+      & > li {
+        display: inline-block;
+
+        &:hover {
+          ul { display: block; }
+        }
+
+        position: relative;
+
+        ul {
+          display: none;
+          min-width: 100%;
+          white-space: nowrap;
+          position: absolute;
+          top: 31px; left: 0;
+          background: #222;
+          padding: 0 10px;
+
+          li:not(:last-child) a {
+            border-bottom: 1px solid #333;
+
+            &:hover {
+              //border-bottom: 1px dashed #de390c;              
+            }
+          }
+
+          a {
+            font-size: 15px;
+            color: #ddd;
+            display: block;
+            padding: 7px 6px;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        &.has-dropdown > a::after {
+          content: ' ';
+          width: 0; 
+          height: 0; 
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;          
+          border-top: 5px solid rgba(#fff, 0.5);
+          display: inline-block;
+          position: relative; top: -3px; left: 3px;
+        }
+
+        &.has-dropdown:hover {          
+          background: #222;
+        }
+      }      
+    }
 
     a {
       color: white;

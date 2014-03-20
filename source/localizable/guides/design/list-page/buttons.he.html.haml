@@ -41,14 +41,14 @@ title: כפתורים מעוצבים
 
 = preserve do 
   - code("erb") do
-    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 %p
   בשורה:
 
 = preserve do 
   - code("erb") do
-    <td><%= link_to idea, 'Destroy', method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+    <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
 
 %p הכפתור האחרון שנעצב הוא הכפתור 'New Idea'. אותו נרצה לעשות קצת יותר גדול. את השורה:
 

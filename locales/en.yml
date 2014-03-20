@@ -5,6 +5,19 @@ en:
   getting-started: Getting started
   workshops: Workshops
 
+  guides: Guides
+  installation-guide: Installation guide
+  tryruby-tutorial: TryRuby tutorial
+  app-guide: App guide
+  image-resizing-guide: Image resizing guide
+  design-guide: Design guide
+  commenting-guide: Commenting guide
+  heroku-guide: Heroku guide
+  authentication-guide: Authentication guide
+  github-guide: Github guide
+
+  contact: Contact us
+
   # guide names
   app-guide: App Guide
   getting-started-guide: Starter Guide
