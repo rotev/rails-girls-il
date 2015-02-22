@@ -187,10 +187,10 @@ body > header {
 .welcome {
   background: url(/images/cover.jpg) left bottom no-repeat;
   background-size: 100%;
-  height: 350px;
+  height: 320px;
   @include box-sizing(border-box);
-  padding-top: 52px;
-  margin-bottom: 50px;
+  padding-top: 5px;
+  margin-bottom: 30px;
 
   p {
     width: 50%;
@@ -214,7 +214,14 @@ body > header {
 
     h1 {
       margin-bottom: 34px;
-      font-size: 35px;
+      font-size: 25px;
+    }
+
+    p {
+      margin-bottom: 5px;
+      border-bottom: 1px;
+      padding-bottom: 17px;
+      font-size: 15px;
     }
 
     article {
@@ -223,7 +230,7 @@ body > header {
       padding-bottom: 17px;
 
       .where {
-        font-size: 30px;
+        font-size: 25px;
         display: inline-block;
         width: 150px;
       }
@@ -238,7 +245,7 @@ body > header {
     width: 50%; height: 350px;
     float: right;
     position: relative;
-    margin-top: 13px;
+    margin-top: 30px;
 
     a {
       width: 100%;
