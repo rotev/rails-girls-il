@@ -10,19 +10,26 @@ title: הוסיפי תפריט ניווט ו-footer
 
 = preserve do 
   - code("erb") do
-    %nav.navbar.navbar-default.navbar-fixed-top
+    %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
       .container
-        %a.navbar-brand{href: "/"} The Idea app
-        %ul.nav.navbar-nav
-          %li.active
-            %a{href: "/ideas"} Ideas
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "/"} The Idea app
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "/ideas"} Ideas
 
 ולפני `</body>` הוסיפי
 
 = preserve do 
-  - code("erb") do
-    %footer
-      .container
-        Rails Girls 2014
+  %footer
+    .container
+      Rails Girls 2015
+  %script{:src => "//railsgirls.com/assets/bootstrap.js"}
 
 שימי לב להבדל בין `<body>` ל-`</body>`!        

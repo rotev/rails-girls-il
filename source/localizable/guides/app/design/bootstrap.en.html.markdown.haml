@@ -24,10 +24,8 @@ and replace
 = preserve do 
   - code("erb") do
     \<%= yield %>
-  with
+with
+= preserve do
   - code("erb") do
     .container
       \<%= yield %>
-
-
-

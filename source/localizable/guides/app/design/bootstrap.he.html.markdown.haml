@@ -20,15 +20,16 @@ title: הוסיפי את ספריית Bootstrap
   - code("erb") do
     %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
     %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap-theme.css", rel: "stylesheet"}/
+
 והחליפי את 
 
-= preserve do 
+= preserve do
   - code("erb") do
     \<%= yield %>
-  ב-
+עם
+= preserve do
   - code("erb") do
     .container
       \<%= yield %>
-
 
 

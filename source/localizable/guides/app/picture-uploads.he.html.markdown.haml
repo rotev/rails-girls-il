@@ -68,6 +68,22 @@ title: הוספת אפשרות להעלאת תמונות
   - code("erb") do
     <%= f.file_field :picture %>
 
+
+לפעמים את יכולה להיתקל בשגיאה הבאה: *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*
+אם זה קורה, אז בקובץ `app/views/ideas/_form.html.erb`
+שני את השורה
+
+= preserve do
+  - code("erb") do
+    <%= form_for(@idea) do |f| %>
+
+ל-
+
+= preserve do
+  - code("erb") do
+    <%= form_for @idea, :html => {:multipart => true} do |f| %>
+
+
 בדפדפן שלך, הוסיפי רעיון חדש עם תמונה. כשאת מעלה תמונה היא לא נראית כל כך טוב כי היא מציגה רק את הנתיב אל קובץ התמונה, אז בואי נתקן זאת.
 
 פתחי את הקובץ `app/views/ideas/show.html.erb` ושני את 
