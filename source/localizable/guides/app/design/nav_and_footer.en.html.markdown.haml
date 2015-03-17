@@ -27,11 +27,11 @@ Let's also add a navigation bar and footer to the layout. In the same file, unde
 
 and before `</body>` add
 
-= preserve do 
-  %footer
-    .container
-      Rails Girls 2015
-  %script{:src => "//railsgirls.com/assets/bootstrap.js"}
-
+= preserve do
+  - code("erb") do
+    %footer
+      .container
+        Rails Girls 2015
+    %script{:src => "//railsgirls.com/assets/bootstrap.js"}
 
 Pay attention to the difference between `<body>` and `</body>`!
