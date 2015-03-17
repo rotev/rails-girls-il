@@ -26,10 +26,11 @@ title: הוסיפי תפריט ניווט ו-footer
 
 ולפני `</body>` הוסיפי
 
-= preserve do 
-  %footer
-    .container
-      Rails Girls 2015
-  %script{:src => "//railsgirls.com/assets/bootstrap.js"}
+= preserve do
+  - code("erb") do
+    %footer
+      .container
+        Rails Girls 2015
+    %script{:src => "//railsgirls.com/assets/bootstrap.js"}
 
 שימי לב להבדל בין `<body>` ל-`</body>`!        
