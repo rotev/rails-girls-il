@@ -27,7 +27,21 @@ The scaffold creates new files in your project directory, but to get it to work 
   in your browser. Click around and test what you got by running these few command-line commands.
 
 %p 
-  If you encounter an "ExecJS runtime error" on Window, 
+  * If you encounter an "ExecJS runtime error" on Windows, try to open the file
+  %code app/views/layouts/application.html.erb
+  and change the word
+  %code 'application'
+  to
+  %code'default'
+  in the following lines:
+
+= preserve do
+  - code("sh") do
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+%p
+  If the problem is still not solved,
   = link_to "this", "http://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial"
   might help.
 
