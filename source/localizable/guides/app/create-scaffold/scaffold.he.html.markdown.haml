@@ -25,8 +25,22 @@ title: צרי את שלד הרעיון
   =link_to "http://localhost:3000/ideas", "http://localhost:3000/ideas", target: "_blank"
   בדפדפן שלך. לחצי מסביב ובדקי את מה שקיבלת אחרי שהרצת את מעט הפקודות שראינו.
 
-%p 
-  אם נתקלת בשגיאה "ExecJS runtime error" על Windows 
+%p
+  * אם נתקלת בשגיאה "ExecJS runtime error" על Windows, נסי לפתוח את הקובץ
+  %code app/views/layouts/application.html.erb
+  ולהחליף את המילה
+  %code 'application'
+  ל
+  %code'default'
+  בשורות הבאות:
+
+= preserve do
+  - code("sh") do
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+%p
+  אם הבעיה עדיין נמשכת,
   = link_to "השאלה הזאת", "http://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial"
   יכולה לעזור.
 
