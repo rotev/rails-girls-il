@@ -1,0 +1,18 @@
+---
+guide: app
+step: design
+part: container
+title: הוסיפי מראה כללי חדש
+---
+
+פתחי את הקובץ `app/views/layouts/application.html.erb` בעורך הטקסט שלך,  והחליפי את
+
+= preserve do
+  - code("erb") do
+    \<%= yield %>
+עם
+= preserve do
+  - code("erb") do
+    .container
+      \<%= yield %>
+

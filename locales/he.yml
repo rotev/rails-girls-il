@@ -51,6 +51,7 @@ he:
   restart: אתחלי את שרת ה-Rails
 
   bootstrap: הוסיפי את ספריית Bootstrap
+  container: הוסיפי מראה כללי חדש
   nav_and_footer: הוסיפי תפריט ניווט ו-footer
   css: עדני את העיצוב עם קצת CSS
 
