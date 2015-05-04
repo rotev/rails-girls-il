@@ -9,23 +9,47 @@ title: Add Bootstrap
 
 %p The app doesn't look very nice yet. Let's do something about that. We'll use the Twitter Bootstrap project to give us nicer styling really easily.
 
-Open `app/views/layouts/application.html.erb` in your text editor and above the line
+Open the `Gemfile` in your text editor and below the line
 
 = preserve do
-  - code("erb") do
-    ='<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>'
+  - code("ruby") do
+    source 'https://rubygems.org'
+
 add
-= preserve do
-  - code("erb") do
-    %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
-    %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap-theme.css", rel: "stylesheet"}/
-and replace
 
-= preserve do 
-  - code("erb") do
-    \<%= yield %>
-with
 = preserve do
-  - code("erb") do
-    .container
-      \<%= yield %>
+  - code("ruby") do
+    gem 'bootstrap-sass', '~> 3.2.0'
+
+
+And then run in your terminal:
+= preserve do
+  - code("sh") do
+    bundle install
+
+%br
+
+Next, rename `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.css.sass`.
+
+%br
+
+Then we can import the Bootstrap assets in your newly-renamed `application.css.sass` file.
+%p In the end of the file `application.css.sass` add those lines:
+
+= preserve do
+  - code("ruby") do
+    @import "bootstrap-sprockets"
+    @import "bootstrap"
+
+%br
+
+Finally, open the file `app/assets/javascripts/application.js` in your text editor, and under the line:
+
+%br
+%br
+
+`//= require jquery`
+
+%p add
+
+`//= require bootstrap-sprockets`

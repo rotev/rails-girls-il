@@ -51,6 +51,7 @@ en:
   restart: Restart the Rails server
 
   bootstrap: Add Bootstrap
+  container: Add a container
   nav_and_footer: Add a nav bar and a footer
   css: Refine with some CSS
 

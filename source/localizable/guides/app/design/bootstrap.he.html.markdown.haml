@@ -5,31 +5,50 @@ part: bootstrap
 title: הוסיפי את ספריית Bootstrap
 ---
 
-
 **מאמן/ת:** דברי על הקשר בין HTML ו-Rails. אלו חלקים מה-views הם HTML ואלו הם ERB? מה זה MVC ואיך זה מתקשר לעניינינו? (Models ו-controllers אחראיים לייצור תצוגות ה-HTML.)
 
 %p האפליקציה עדיין לא נראית משהו. בואי נטפל בזה. נוסיף את הפרוייקט Twitter Bootstrap כדי לתת לנו סטייל נחמד יותר לאתר בקלות רבה.
 
-פתחי את הקובץ `app/views/layouts/application.html.erb` בעורך הטקסט שלך, ומעל השורה
+פתחי את `Gemfile` בעורך הטקסט שלך, ומתחת לשורה
 
 = preserve do
-  - code("erb") do
-    ='<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>'
+  - code("ruby") do
+    source 'https://rubygems.org'
+
 הוסיפי
-= preserve do 
-  - code("erb") do
-    %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
-    %link{href: "http://railsgirls.co.il/bootstrap/css/bootstrap-theme.css", rel: "stylesheet"}/
-
-והחליפי את 
 
 = preserve do
-  - code("erb") do
-    \<%= yield %>
-עם
+  - code("ruby") do
+    gem 'bootstrap-sass', '~> 3.2.0'
+
+
+ואז תריצי בטרמינל את הפקודה הבאה:
+
 = preserve do
-  - code("erb") do
-    .container
-      \<%= yield %>
+  - code("sh") do
+    bundle install
+%br
 
+שני את השם של `app/assets/stylesheets/application.css` להיות `app/assets/stylesheets/application.css.sass`.
 
+%br
+
+ואז אנחנו יכולים להוסיף את ה- Bootstrap בקובץ שזה עתה החלפנו לו את השם להיות `application.css.sass`.
+
+%p פתחי את הקובץ והוסיפי בסופו את השורות הבאות:
+
+= preserve do
+  - code("ruby") do
+    @import "bootstrap-sprockets"
+    @import "bootstrap"
+
+לבסוף פתחי את הקובץ `app/assets/javascripts/application.js` בעורך הטקסט שלך, ומתחת לשורה הבאה:
+
+%br
+%br
+
+`//= require jquery`
+
+%p הוסיפי
+
+`//= require bootstrap-sprockets`

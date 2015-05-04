@@ -1,0 +1,17 @@
+---
+guide: app
+step: design
+part: container
+title: Add container
+---
+
+Open `app/views/layouts/application.html.erb` in your text editor and replace
+
+= preserve do 
+  - code("erb") do
+    \<%= yield %>
+with
+= preserve do
+  - code("erb") do
+    .container
+      \<%= yield %>
