@@ -29,18 +29,18 @@ title: הוסיפי את ספריית Bootstrap
     bundle install
 %br
 
-שני את השם של `app/assets/stylesheets/application.css` להיות `app/assets/stylesheets/application.css.sass`.
+שני את השם של `app/assets/stylesheets/application.css` להיות `app/assets/stylesheets/application.css.scss`.
 
 %br
 
-ואז אנחנו יכולים להוסיף את ה- Bootstrap בקובץ שזה עתה החלפנו לו את השם להיות `application.css.sass`.
+ואז אנחנו יכולים להוסיף את ה- Bootstrap בקובץ שזה עתה החלפנו לו את השם להיות `application.css.scss`.
 
 %p פתחי את הקובץ והוסיפי בסופו את השורות הבאות:
 
 = preserve do
   - code("ruby") do
-    @import "bootstrap-sprockets"
-    @import "bootstrap"
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
 
 לבסוף פתחי את הקובץ `app/assets/javascripts/application.js` בעורך הטקסט שלך, ומתחת לשורה הבאה:
 
