@@ -1,4 +1,13 @@
 he:
+  layout:
+    main-header: ריילס גירלס תל-אביב
+    sub-header: בואו נכיר יחד את עולם התכנות
+    links:
+      home: בית
+      events: ארועים
+      after: אחרי הסדנא
+      team: צוות
+
   hello: שלום
   direction: rtl
 

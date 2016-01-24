@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="zfBBZC7U_W-U3H0KTE3TOSnnWSDEvTMQzzE6N7g0_AA" name="google-site-verification"/>
+    <link href="/favicon.png" rel="shortcut icon"></link>
+    <title>Rails Girls TLV</title>
+    <% if I18n.locale == :en %>
+      <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cabin:400,600,700" %>
+    <% end %>
+    <%= stylesheet_link_tag "normalize", "foundation", "lightbox", "site_layout" %>
+    <% if t(:direction) == 'rtl' %>
+      <%= stylesheet_link_tag "app-rtl" %>
+    <% end %>
+    <% # Some SEO stuff %>
+    <% description = data.page.description || 'Rails Girls Tel-Aviv—Yaffo aims at giving girls and women the tools for building their own ideas' %>
+    <meta content="<%= description %>" name="description"/>
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" value="<%= description %>"/>
+    <!-- Open Graph data-->
+    <meta content="Rails Girls TLV" name="og:title"/>
+    <meta content="article" name="og:type"/>
+    <meta content="http://railsgirls.co.il/" name="og:url"/>
+    <meta content="http://railsgirls.co.il/images/social_networks_image.jpg" name="og:image"/>
+    <meta content="<%= description %>" name="og:description"/>
+  </head>
+  <body>
+    <header>
+      <div class="background-image background-image-home">
+
+        <nav class="header-navigation center" style="background-color: transparent;">
+          <ul>
+            <li><%= link_to t('layout.links.home'), localized_url('home.html') %></li>
+            <li class="active"><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
+            <li><%= link_to t('layout.links.after'), localized_url('after.html') %></li>
+            <li><%= link_to t('layout.links.team'), localized_url('team.html') %></li>
+          </ul>
+        </nav>
+
+        <div class="header-title">
+          <h1><%= t('layout.main-header') %></h1>
+          <h2><%= t('layout.sub-header') %></h2>
+        </div>
+      </div>
+    </header>
+
+    <div class="content center cf">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <fieldset>
+        <legend align="center">
+          <img alt="Heart" src="../images/logo-eng.png">
+          <h1>Rails Girls TLV</h1>
+        </legend>
+      </fieldset>
+      <div class="center">
+        2016 Rails Girls TLV.
+        <a href="mailto:contact@railsgirls.co.il">Contact us</a>
+        or follow us on
+        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo">Facebook</a>.
+        <h2>E A T &nbsp; C U P C A K E S &nbsp; &amp; &nbsp; M A K E &nbsp; C O D E</h2>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

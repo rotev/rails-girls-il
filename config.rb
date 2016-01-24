@@ -116,7 +116,7 @@ helpers do
   end
 end
 
-page "*", layout: :website
+page "*", layout: :site_layout
 
 page "guides/*", layout: :guide
 page "en/guides/*", layout: :guide

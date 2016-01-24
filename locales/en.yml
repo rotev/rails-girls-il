@@ -1,4 +1,13 @@
 en:
+  layout:
+    main-header: Rails Girls TLV
+    sub-header: Lets code together
+    links:
+      home: Home
+      events: Events
+      after: After the event
+      team: Team
+
   hello: hello
   direction: ltr
 
