@@ -40,9 +40,22 @@
             <li><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
             <li><%= link_to t('layout.links.after'), localized_url('after.html') %></li>
             <li><%= link_to t('layout.links.team'), localized_url('team.html') %></li>
+
+            <span class="language-selector">
+              <%= link_to image_tag('/images/site/israel.png', class: "language-selector-image", alt: 'עברית'), "/", class: I18n.locale == :he ? 'active' : '' %>
+              <%= link_to image_tag('/images/site/england.png', class: "language-selector-image", alt: 'English'), "/en", class: I18n.locale == :en ? 'active' : '' %>
+            </span>
+
+            <li class="header-guides">
+              Guides
+              <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>Illustrations</li>
+              </ul>
+            </li>
           </ul>
         </nav>
-
         <div class="header-title">
           <h1><%= t('layout.main-header') %></h1>
           <h2><%= t('layout.sub-header') %></h2>

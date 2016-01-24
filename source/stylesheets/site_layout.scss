@@ -9,6 +9,46 @@
   background-image: url(../images/events/1/1.jpg);
 }
 
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li {
+  background: #555;
+  display: block;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.language-selector {
+  float: right;
+}
+
+.language-selector-image {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 .navigation {
   padding-left: 25px;
   padding-right: 25px;
@@ -18,9 +58,10 @@
   width: 100%;
   z-index: 1;
 
+
   ul {
     display: block;
-    width: 980px;
+    width: 700px;
     margin: 0 auto 0 auto;
     padding: 10px 10px;
 
@@ -48,6 +89,19 @@
     }
   }
 }
+
+.header-guides {
+  border: 1px solid #DE390C;
+  border-radius: 9px;
+  padding: 7px;
+  font-size: 10px;
+  float: right;
+  color: #DE390C;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 
 img {
   vertical-align: baseline;
