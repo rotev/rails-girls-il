@@ -3,18 +3,19 @@
   width: auto;
   background-size: cover;
   background-position: 50%;
-  -webkit-box-shadow: inset 0px 100px 135px rgba(0,0,0,0.8),inset 0px -130px 135px rgba(0,0,0,0.7);
-  -moz-box-shadow: inset 0px 100px 135px rgba(0,0,0,0.8),inset 0px -130px 135px rgba(0,0,0,0.7);
-  box-shadow: inset 0px 100px 135px rgba(0,0,0,0.8),inset 0px -130px 135px rgba(0,0,0,0.7);
 }
 
 .background-image-home {
-  background-image: url(../images/cover.jpg);
+  background-image: url(../images/events/1/1.jpg);
 }
 
-.header-navigation {
+.navigation {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
+  background-color: #ffffff;
+  display: inline-flex;
   width: 100%;
-  color: white;
   z-index: 1;
 
   ul {
@@ -26,41 +27,63 @@
     li {
       vertical-align: middle;
       display: inline-block;
-      padding-right: 40px;
+      margin-right: 40px;
 
       .active {
-        color: #e52c2e;
+        border-bottom: 3px solid #DE390C;
+        padding-bottom: 17px;
       }
 
       a {
-        font-size: 16px;
-        font-weight: 600;
-        color: white;
+        font-size: 13px;
+        color: #DE390C;
         text-decoration: none;
+        text-transform: uppercase;
       }
 
       a:hover {
-        color: #e52c2e;
+        border-bottom: 3px solid #DE390C;
+        padding-bottom: 17px;
       }
     }
   }
 }
 
-.dropdown {
-  left: 0px;
-  height: auto;
-  padding-top: 0px;
-  top: 57px;
-  display: none;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  overflow: hidden;
-  visibility: visible;
+img {
+  vertical-align: baseline;
 }
 
 .content, .content-section {
   margin: 60px auto;
+}
+
+.header-top {
+  margin: 10px;
+}
+
+.header-logo {
+  width: 35px;
+  height: 30px;
+  margin-right: 11px;
+}
+
+.header-logo-text {
+  display: inline-block;
+}
+
+.header-logo-text-main {
+  font-size: 16px;
+  font-weight: 900;
+  color: #DE390C;
+  text-transform: uppercase;
+}
+
+.header-logo-text-sub {
+  font-size: 14px;
+  font-weight: 500;
+  color: #DE390C;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 .header-title {

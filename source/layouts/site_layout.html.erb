@@ -27,27 +27,19 @@
   <body>
     <header>
       <div class="background-image background-image-home">
-
-        <nav class="header-navigation center" style="background-color: transparent;">
+        <nav class="navigation">
+          <span class="header-top">
+            <img class="header-logo" src="../images/site/logo.png" >
+            <span class="header-logo-text">
+              <div class="header-logo-text-main">Rails Girls</div>
+              <div class="header-logo-text-sub">Tel aviv-yaffo</div>
+            </span>
+          </span>
           <ul>
             <li><%= link_to t('layout.links.home'), localized_url('index.html') %></li>
             <li><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
             <li><%= link_to t('layout.links.after'), localized_url('after.html') %></li>
             <li><%= link_to t('layout.links.team'), localized_url('team.html') %></li>
-            <li class="has-dropdown">
-              Guides
-              <ul class="dropdown">
-                <li>
-                  <%= link_to t('installation-guide'), external_guide_url('install'), target: '_blank' %>
-                </li>
-                <li>
-                  <%= link_to t('tryruby-tutorial'), "http://tryruby.org", target: '_blank' %>
-                </li>
-                <li>
-                  <%= link_to t('app-guide'), guide_url('app'), target: '_blank' %>
-                </li>
-              </ul>
-            </li>
           </ul>
         </nav>
 
