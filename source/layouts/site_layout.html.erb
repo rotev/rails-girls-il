@@ -34,6 +34,20 @@
             <li><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
             <li><%= link_to t('layout.links.after'), localized_url('after.html') %></li>
             <li><%= link_to t('layout.links.team'), localized_url('team.html') %></li>
+            <li class="has-dropdown">
+              Guides
+              <ul class="dropdown">
+                <li>
+                  <%= link_to t('installation-guide'), external_guide_url('install'), target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to t('tryruby-tutorial'), "http://tryruby.org", target: '_blank' %>
+                </li>
+                <li>
+                  <%= link_to t('app-guide'), guide_url('app'), target: '_blank' %>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
 
@@ -49,17 +63,11 @@
     </div>
 
     <footer>
-      <fieldset>
-        <legend align="center">
-          <img alt="Heart" src="../images/logo-eng.png">
-          <h1><%= t('layout.main-header') %></h1>
-        </legend>
-      </fieldset>
       <div class="center">
         <%= t('layout.footer.text') %>
         <a href="mailto:contact@railsgirls.co.il"><%= t('layout.footer.contact-us') %></a>
         <%= t('layout.footer.follow') %>
-        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo"><%= t('layout.footer.facebook') %></a>.
+        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo" target="_blank"><%= t('layout.footer.facebook') %></a>.
         <h2><%= t('layout.footer.slogan') %></h2>
       </div>
 
