@@ -63,12 +63,22 @@
     </div>
 
     <footer>
-      <div class="center">
-        <%= t('layout.footer.text') %>
-        <a href="mailto:contact@railsgirls.co.il"><%= t('layout.footer.contact-us') %></a>
-        <%= t('layout.footer.follow') %>
-        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo" target="_blank"><%= t('layout.footer.facebook') %></a>.
-        <h2><%= t('layout.footer.slogan') %></h2>
+      <div class="footer-center">
+        <div class="footer-upper">
+          <span class="footer-upper-text"><%= t('layout.footer.text') %></span>
+          <img src="../images/site/logo.png" >
+          <span class="footer-upper-subtext"><%= t('layout.footer.subtext') %></span>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/railsgirls.telaviv.yaffo" target="_blank">
+            <img class="footer-icon" src="../images/site/facebook.png" >
+          </a>
+          <a href="mailto:contact@railsgirls.co.il">
+            <img class="footer-icons-mail" src="../images/site/mail.png" >
+          </a>
+        </div>
+        <div class="footer-slogan"><%= t('layout.footer.slogan') %></div>
       </div>
 
     </footer>

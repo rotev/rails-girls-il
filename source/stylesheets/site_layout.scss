@@ -63,11 +63,6 @@
   margin: 60px auto;
 }
 
-.center {
-  width: 980px;
-  margin: 0 auto 0 auto;
-}
-
 .header-title {
   width: 100%;
   padding: 135px 0;
@@ -90,42 +85,60 @@
 }
 
 footer {
-  padding: 40px 0;
+  padding: 35px 0 17px;
   color: #cccccc;
   font-size: 13px;
-  background: #1b1a16;
+  background: #3C3C3E;
+}
 
-  h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: white;
-  }
+.footer-center {
+  width: 440px;
+  margin: 0 auto 0 auto;
+}
 
-  a {
-    color: #cccccc;
-    text-decoration: underline;
-  }
+.footer-upper {
+  font-size: 24px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
 
-  .center {
-    text-align: center;
-    font-size: 13px;
-  }
+.footer-upper-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-right: 13px;
+}
 
-  h1 {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-  }
+.footer-upper-subtext {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 13px;
+}
 
-  fieldset {
-    border-top: 1px solid #555555;
+.footer-divider {
+  border-color: #000000;
+}
 
-    legend {
-      padding: 40px 40px;
-      width: 140px;
-      margin: 0 auto;
-      vertical-align: middle;
-      display: inline-block;
-    }
-  }
+.footer-icons {
+  text-align: center;
+}
+
+.footer-icon {
+  margin: auto 16px;
+}
+
+.footer-icons-mail {
+  height: 34px;
+  margin-top: -13px;
+}
+
+.footer-slogan {
+  margin-top: 20px;
+  color: DE390C;
+  font-size: 12px;
+  text-align: center;
 }

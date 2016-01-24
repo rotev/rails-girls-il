@@ -8,11 +8,9 @@ en:
       after: After the event
       team: Team
     footer:
-      text: 2016 Rails Girls TLV
-      contact-us: Contact us
-      follow: or follow us
-      facebook: Facebook
-      slogan: Drink cava and code
+      text: Rails Girls
+      subtext: tel aviv - yaffo
+      slogan: Made with love in Tel Aviv
   hello: hello
   direction: ltr
 
