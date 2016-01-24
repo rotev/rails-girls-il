@@ -1,13 +1,14 @@
+section h3 {
+  color: #CBCBCD;
+  font-size: 24px;
+  margin-bottom: 20px ;
+}
+
 .home {
   margin-top: 40px;
 
   .home-paragraph {
     width: 90%;
-  }
-
-  h3 {
-    color: #CBCBCD;
-    font-size: 24px;
   }
 
   p {
@@ -25,7 +26,7 @@
       }
     }
 
-    .event-date {
+    h4 {
       font-size: 16px;
       font-weight: bold;
     }
@@ -37,9 +38,32 @@
       margin-right: 5px;
     }
 
-    p.registraction-closed {
+    p.registration-closed {
       display: block; // change to display: none; when opening the registration
       font-size: 12px;
+      color: darkred;
     }
+  }
+}
+
+.faq {
+  background-color: #FAFAFA;
+  padding-top: 40px;
+
+  .thumbnail {
+    box-shadow: none;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 14px;
   }
 }
