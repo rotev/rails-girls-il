@@ -7,7 +7,12 @@ en:
       events: Events
       after: After the event
       team: Team
-
+    footer:
+      text: 2016 Rails Girls TLV
+      contact-us: Contact us
+      follow: or follow us
+      facebook: Facebook
+      slogan: Drink cava and code
   hello: hello
   direction: ltr
 

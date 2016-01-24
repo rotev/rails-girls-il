@@ -7,6 +7,12 @@ he:
       events: ארועים
       after: אחרי הסדנא
       team: צוות
+    footer:
+      text: ריילס גירלס תל-אביב 2016
+      contact-us: צרי קשר
+      follow: או עקבי אחרינו ב
+      facebook: פייסבוק
+      slogan: שתו קאווה וכתבו קוד
 
   hello: שלום
   direction: rtl

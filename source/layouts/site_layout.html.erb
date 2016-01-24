@@ -30,8 +30,8 @@
 
         <nav class="header-navigation center" style="background-color: transparent;">
           <ul>
-            <li><%= link_to t('layout.links.home'), localized_url('home.html') %></li>
-            <li class="active"><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
+            <li><%= link_to t('layout.links.home'), localized_url('index.html') %></li>
+            <li><%= link_to t('layout.links.events'), localized_url('events.html') %></li>
             <li><%= link_to t('layout.links.after'), localized_url('after.html') %></li>
             <li><%= link_to t('layout.links.team'), localized_url('team.html') %></li>
           </ul>
@@ -52,18 +52,20 @@
       <fieldset>
         <legend align="center">
           <img alt="Heart" src="../images/logo-eng.png">
-          <h1>Rails Girls TLV</h1>
+          <h1><%= t('layout.main-header') %></h1>
         </legend>
       </fieldset>
       <div class="center">
-        2016 Rails Girls TLV.
-        <a href="mailto:contact@railsgirls.co.il">Contact us</a>
-        or follow us on
-        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo">Facebook</a>.
-        <h2>E A T &nbsp; C U P C A K E S &nbsp; &amp; &nbsp; M A K E &nbsp; C O D E</h2>
+        <%= t('layout.footer.text') %>
+        <a href="mailto:contact@railsgirls.co.il"><%= t('layout.footer.contact-us') %></a>
+        <%= t('layout.footer.follow') %>
+        <a href="https://www.facebook.com/railsgirls.telaviv.yaffo"><%= t('layout.footer.facebook') %></a>.
+        <h2><%= t('layout.footer.slogan') %></h2>
       </div>
 
     </footer>
 
   </body>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../javascripts/layout.js"></script>
 </html>
