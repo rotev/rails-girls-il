@@ -8,7 +8,7 @@
     <% if I18n.locale == :en %>
       <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cabin:400,600,700" %>
     <% end %>
-    <%= stylesheet_link_tag "normalize", "foundation", "lightbox", "site_layout", "content" %>
+    <%= stylesheet_link_tag "normalize", "foundation", "lightbox", "site_layout", "content", "stylesheets/foundation/foundation" %>
     <% if t(:direction) == 'rtl' %>
       <%= stylesheet_link_tag "app-rtl" %>
     <% end %>
@@ -77,7 +77,7 @@
         <hr class="footer-divider">
         <div class="footer-icons">
           <a href="https://www.facebook.com/railsgirls.telaviv.yaffo" target="_blank">
-            <img class="footer-icon" src="../images/site/facebook.png" >
+            <img class="footer-icon" src="images/site/facebook.png" >
           </a>
           <a href="mailto:contact@railsgirls.co.il">
             <img class="footer-icons-mail" src="../images/site/mail.png" >
