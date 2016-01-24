@@ -36,5 +36,10 @@
       padding: 5px 25px;
       margin-right: 5px;
     }
+
+    p.registraction-closed {
+      display: block; // change to display: none; when opening the registration
+      font-size: 12px;
+    }
   }
 }
