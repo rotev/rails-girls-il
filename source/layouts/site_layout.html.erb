@@ -46,11 +46,12 @@
           </span>
 
           <li class="header-guides">
-            Guides
+            <%= t('layout.links.guides') %>
+            <img class="link-arrow" src="../images/site/arrow_down.png" >
             <ul>
-              <li>Web Design</li>
-              <li>Web Development</li>
-              <li>Illustrations</li>
+              <li><%= link_to t('installation-guide'), external_guide_url('install'), target: '_blank' %></li>
+              <li><%= link_to t('tryruby-tutorial'), "http://tryruby.org", target: '_blank' %></li>
+              <li><%= link_to t('app-guide'), guide_url('app'), target: '_blank' %></li>
             </ul>
           </li>
         </ul>
@@ -73,8 +74,11 @@
           <a href="https://www.facebook.com/railsgirls.telaviv.yaffo" target="_blank">
             <img class="footer-icon" src="/images/site/facebook.png" >
           </a>
+          <a href="https://twitter.com/railsgirlstlv">
+            <img class="footer-icon" src="/images/site/twitter.png" >
+          </a>
           <a href="mailto:contact@railsgirls.co.il">
-            <img class="footer-icons-mail" src="/images/site/mail.png" >
+            <img class="footer-icon footer-icons-mail" src="/images/site/mail.png" >
           </a>
         </div>
         <div class="footer-slogan"><%= t('layout.footer.slogan') %></div>

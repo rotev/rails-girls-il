@@ -7,9 +7,10 @@ en:
       events: Events
       after: After the event
       team: Team
+      guides: Guides
     footer:
       text: Rails Girls
-      subtext: Tel aviv - yaffo
+      subtext: Tel aviv-yaffo
       slogan: Made with love in Tel Aviv
   hello: hello
   direction: ltr
