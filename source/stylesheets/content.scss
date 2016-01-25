@@ -10,10 +10,14 @@
   }
 }
 
-section h3 {
-  color: darkgray;
-  font-size: 24px;
-  margin-bottom: 20px ;
+section {
+  padding-bottom: 30px;
+
+  h3 {
+    color: darkgray;
+    font-size: 24px;
+    margin-bottom: 20px ;
+  }
 }
 
 .content {
@@ -28,7 +32,7 @@ section h3 {
     font-size: 14px;
   }
 
-  .upcoming-events {
+  .events {
 
     .media-object-section.left-padding {
       padding-right: 0;
@@ -61,6 +65,31 @@ section h3 {
       display: block; // change to display: none; when opening the registration
       font-size: 12px;
       color: darkred;
+    }
+
+    .past-events {
+      &.oct13 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-102013.jpg'); }
+      &.jan14 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-012014.jpg'); }
+      &.feb14 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-022014.jpg'); }
+      &.mar14 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-032014.jpg'); }
+      &.mar15 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-032015.jpg'); }
+      &.may15 { background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/images/site/workshop-052015.jpg'); }
+
+      background-size: contain;
+      background-position: center;
+      width: 130px;
+      height: 120px;
+      border-radius: 200px;
+      float: left;
+      margin: 7px;
+      
+      div {
+        line-height: 110px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+      }
     }
   }
 }
