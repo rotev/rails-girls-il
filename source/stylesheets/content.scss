@@ -6,7 +6,11 @@
 }
 
 .background-image-home {
-  background-image: url(../images/events/1/1.jpg);
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../images/events/1/1.jpg);
+}
+
+.background-image-events {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../images/site/events-cover.jpg);
 }
 
 .mailing-list {
@@ -31,7 +35,7 @@ section {
   }
 }
 
-.content {
+.main-content {
   margin-top: 60px;
 
   .home-paragraph {
