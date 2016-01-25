@@ -29,8 +29,15 @@ section h3 {
   }
 
   .upcoming-events {
+
+    .media-object-section.left-padding {
+      padding-right: 0;
+      padding-left: 1rem;
+    }
+
     .thumbnail {
       box-shadow: none;
+      border: none;
 
       img {
         width: 130px;
