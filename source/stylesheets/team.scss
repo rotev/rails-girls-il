@@ -1,6 +1,6 @@
 .team__organizers {
   background: #f2f0f0;
-  padding: 30px;
+  padding: 30px 30px 60px;
 
   .organizer {
     margin: 0 10px;
@@ -47,7 +47,7 @@
   text-align: center;
   height: 0;
 
-  a {
+  a.button {
     border-radius: 50px;
     padding: 15px 60px;
     font-size: 16px;
@@ -55,6 +55,15 @@
   }
 }
 
+.being-a-coach {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+
+  a {
+    color: #de390c;
+  }
+}
 
 .team__instructors {
   padding: 30px;
@@ -75,19 +84,6 @@
       margin-left: 10px;
     }
   }
-
-
-  .become-an-instructor {
-    text-align: center;
-    padding-top: 20px;
-
-    a {
-      border-radius: 50px;
-      padding: 5px 25px;
-      font-size: 12px;
-    }
-  }
-
 }
 
 .team__sponsors {
