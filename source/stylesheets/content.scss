@@ -43,12 +43,12 @@ section {
     font-size: 14px;
   }
 
-  .events {
+  .media-object-section.left-padding {
+    padding-right: 0;
+    padding-left: 1rem;
+  }
 
-    .media-object-section.left-padding {
-      padding-right: 0;
-      padding-left: 1rem;
-    }
+  .events {
 
     .thumbnail {
       box-shadow: none;
@@ -91,9 +91,15 @@ section {
       width: 130px;
       height: 120px;
       border-radius: 200px;
-      float: left;
       margin: 7px;
-      
+
+      &.float-left {
+        float: left;
+      }
+      &.float-right {
+        float: right;
+      }
+
       div {
         line-height: 120px;
         text-align: center;
