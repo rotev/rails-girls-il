@@ -40,8 +40,15 @@ section h3 {
   }
 
   .upcoming-events {
+
+    .media-object-section.left-padding {
+      padding-right: 0;
+      padding-left: 1rem;
+    }
+
     .thumbnail {
       box-shadow: none;
+      border: none;
 
       img {
         width: 130px;
@@ -88,5 +95,21 @@ section h3 {
   
   p {
     font-size: 14px;
+  }
+}
+
+.news {
+  .thumbnail {
+    border: none;
+    box-shadow: none;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  a.media {
+    color: darkred;
+    font-size: 12px;
   }
 }
