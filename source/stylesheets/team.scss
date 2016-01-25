@@ -4,13 +4,42 @@
   padding: 30px;
 
   .organizer {
-    padding: 0 10px;
+    margin: 0 10px;
     display: inline-block;
+    position: relative;
 
     img {
       width: 200px;
       height: 200px;
       border-radius: 400px;
+      object-fit: cover;
+    }
+
+    .organizer-name {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(236, 88, 64, 0.5);
+      color: #fff;
+      border-radius: 400px;
+      text-align: center;
+      padding-top: 80px;
+      font-size: 24px;
+
+      visibility: hidden;
+      opacity: 0;
+
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    &:hover .organizer-name {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
