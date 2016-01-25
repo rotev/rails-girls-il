@@ -1,0 +1,120 @@
+.team__organizers {
+  background: #f2f0f0;
+  margin-top: 60px;
+  padding: 30px;
+
+  .organizer {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 400px;
+      object-fit: cover;
+    }
+
+    .organizer-name {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(236, 88, 64, 0.5);
+      color: #fff;
+      border-radius: 400px;
+      text-align: center;
+      padding-top: 80px;
+      font-size: 24px;
+
+      visibility: hidden;
+      opacity: 0;
+
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    &:hover .organizer-name {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.i-want-to-help {
+  text-align: center;
+  height: 0;
+
+  a {
+    border-radius: 50px;
+    padding: 15px 60px;
+    font-size: 16px;
+    bottom: 25px;
+  }
+}
+
+
+.team__instructors {
+  padding: 30px;
+
+  .instructor {
+    padding: 0 10px;
+    display: inline-block;
+
+    img {
+      width: 130px;
+      height: 130px;
+      display: block;
+      border-radius: 200px;
+    }
+
+    span {
+      margin-top: -25px;
+      margin-left: 10px;
+    }
+  }
+
+
+  .become-an-instructor {
+    text-align: center;
+    padding-top: 20px;
+
+    a {
+      border-radius: 50px;
+      padding: 5px 25px;
+      font-size: 12px;
+    }
+  }
+
+}
+
+.team__sponsers {
+  width: 100%;
+  padding: 135px 0;
+  margin: 0 auto;
+  text-shadow: black 0px 0px 30px;
+
+  background-size: cover;
+  background-image: url(../images/team/sponsers_background.jpg);
+
+  h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .apply-now {
+    text-align: center;
+    padding-top: 20px;
+
+    a {
+      border-radius: 50px;
+      padding: 15px 60px;
+      font-size: 16px;
+    }
+  }
+
+}
