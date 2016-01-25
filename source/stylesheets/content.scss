@@ -1,3 +1,14 @@
+.background-image {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.background-image-home {
+  background-image: url(../images/events/1/1.jpg);
+}
+
 .mailing-list {
   text-align: center;
   height: 0;

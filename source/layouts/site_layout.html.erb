@@ -46,11 +46,12 @@
           </span>
 
           <li class="header-guides">
-            Guides
+            <%= t('layout.links.guides') %>
+            <img class="link-arrow" src="../images/site/arrow_down.png" >
             <ul>
-              <li>Web Design</li>
-              <li>Web Development</li>
-              <li>Illustrations</li>
+              <li><%= link_to t('installation-guide'), external_guide_url('install'), target: '_blank' %></li>
+              <li><%= link_to t('tryruby-tutorial'), "http://tryruby.org", target: '_blank' %></li>
+              <li><%= link_to t('app-guide'), guide_url('app'), target: '_blank' %></li>
             </ul>
           </li>
         </ul>

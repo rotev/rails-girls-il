@@ -7,6 +7,7 @@ en:
       events: Events
       after: After the event
       team: Team
+      guides: Guides
     footer:
       text: Rails Girls
       subtext: Tel aviv - yaffo
