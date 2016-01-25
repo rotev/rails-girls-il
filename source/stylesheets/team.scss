@@ -2,6 +2,17 @@
   background: #f2f0f0;
   margin-top: 60px;
   padding: 30px;
+
+  .organizer {
+    padding: 0 10px;
+    display: inline-block;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 400px;
+    }
+  }
 }
 
 .i-want-to-help {
@@ -19,6 +30,24 @@
 
 .team__instructors {
   padding: 30px;
+
+  .instructor {
+    padding: 0 10px;
+    display: inline-block;
+
+    img {
+      width: 130px;
+      height: 130px;
+      display: block;
+      border-radius: 200px;
+    }
+
+    span {
+      margin-top: -25px;
+      margin-left: 10px;
+    }
+  }
+
 
   .become-an-instructor {
     text-align: center;
