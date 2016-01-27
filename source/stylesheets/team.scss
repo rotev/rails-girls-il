@@ -14,33 +14,36 @@
       object-fit: cover;
     }
 
-    .organizer-name {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(236, 88, 64, 0.5);
-      color: #fff;
+    .team-member-name {
       border-radius: 400px;
-      text-align: center;
-      padding-top: 80px;
       font-size: 24px;
-
-      visibility: hidden;
-      opacity: 0;
-
-      -webkit-transition: opacity 0.2s;
-      -moz-transition: opacity 0.2s;
-      -o-transition: opacity 0.2s;
-      transition: opacity 0.2s;
+      line-height: 200px;
     }
 
-    &:hover .organizer-name {
+    &:hover .team-member-name {
       visibility: visible;
       opacity: 1;
     }
   }
+}
+
+.team-member-name {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(236, 88, 64, 0.5);
+  color: #fff;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .i-want-to-help {
@@ -69,19 +72,38 @@
   padding: 30px;
 
   .instructor {
-    padding: 0 10px;
+    margin: 0 10px;
     display: inline-block;
+    position: relative;
 
+    .badge {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+    
     img {
       width: 130px;
       height: 130px;
       display: block;
       border-radius: 200px;
+      object-fit: cover;
     }
 
     span {
-      margin-top: -25px;
-      margin-left: 10px;
+      margin-top: -30px;
+      margin-left: 5px;
+    }
+
+    .team-member-name {
+      border-radius: 200px;
+      font-size: 16px;
+      line-height: 130px;
+    }
+
+    &:hover .team-member-name {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
