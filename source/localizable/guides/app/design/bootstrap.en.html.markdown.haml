@@ -37,13 +37,8 @@ Then we can import the Bootstrap assets in your newly-renamed `application.css.s
 
 %br
 
-Finally, open the file `app/assets/javascripts/application.js` in your text editor, and under the line:
+Finally, open the file `app/assets/javascripts/application.js` in your text editor, and add in the end:
 
-%br
-%br
-
-`//= require jquery`
-
-%p add
-
-`//= require bootstrap-sprockets`
+= preserve do
+  - code("ruby") do
+    \//= require bootstrap-sprockets

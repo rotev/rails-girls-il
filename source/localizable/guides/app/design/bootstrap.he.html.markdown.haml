@@ -36,13 +36,8 @@ title: הוסיפי את ספריית Bootstrap
     @import "bootstrap-sprockets";
     @import "bootstrap";
 
-לבסוף פתחי את הקובץ `app/assets/javascripts/application.js` בעורך הטקסט שלך, ומתחת לשורה הבאה:
+לבסוף פתחי את הקובץ `app/assets/javascripts/application.js` בעורך הטקסט שלך, והוסיפי בסופו:
 
-%br
-%br
-
-`//= require jquery`
-
-%p הוסיפי
-
-`//= require bootstrap-sprockets`
+= preserve do
+  - code("ruby") do
+    \//= require bootstrap-sprockets
