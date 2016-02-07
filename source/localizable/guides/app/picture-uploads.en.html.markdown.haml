@@ -35,18 +35,13 @@ At this point you need to **start the Rails server process** in the terminal.
 
 This is needed for the app to load the added library.
 
-Open `app/models/idea.rb` and under the line
-
-= preserve do 
-  - code("ruby") do
-    class Idea < ActiveRecord::Base
-
-add
+Open `app/models/idea.rb` and under the first line add
 
 = preserve do 
   - code("ruby") do
     mount_uploader :picture, PictureUploader
 
+%br
 Open `app/views/ideas/_form.html.erb` and change
 
 = preserve do 
@@ -94,7 +89,8 @@ to
 
 **Coach:** Talk a little about HTML.
 
-<br/><br/>
+%br
+%br
 %h4 Exercise
 In the 'ideas list' page, it still shows the path to the picture instead of the picture itself.
 Can you fix it?

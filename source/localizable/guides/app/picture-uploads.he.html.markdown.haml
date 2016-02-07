@@ -36,19 +36,16 @@ title: הוספת אפשרות להעלאת תמונות
     rails server
 
 זה נחוץ על מנת שהאפליקציה תטען את הספרייה שהתווספה.
+%br
+%br
 
-פתחי את הקובץ `app/models/idea.rb` ומתחת לשורה
-
-= preserve do 
-  - code("ruby") do
-    class Idea < ActiveRecord::Base
-
-הוסיפי 
+פתחי את הקובץ `app/models/idea.rb` ומתחת לשורה הראשונה הוסיפי:
 
 = preserve do 
   - code("ruby") do
     mount_uploader :picture, PictureUploader
 
+%br
 פתחי את הקובץ `app/views/ideas/_form.html.erb` ושני את 
 
 = preserve do 
@@ -62,7 +59,7 @@ title: הוספת אפשרות להעלאת תמונות
   - code("erb") do
     <%= f.file_field :picture %>
 
-
+%br
 לפעמים את יכולה להיתקל בשגיאה הבאה: *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*
 אם זה קורה, אז בקובץ `app/views/ideas/_form.html.erb`
 שני את השורה
@@ -77,7 +74,7 @@ title: הוספת אפשרות להעלאת תמונות
   - code("erb") do
     <%= form_for @idea, :html => {:multipart => true} do |f| %>
 
-
+%br
 בדפדפן שלך, הוסיפי רעיון חדש עם תמונה. כשאת מעלה תמונה היא לא נראית כל כך טוב כי היא מציגה רק את הנתיב אל קובץ התמונה, אז בואי נתקן זאת.
 
 פתחי את הקובץ `app/views/ideas/show.html.erb` ושני את 
@@ -97,6 +94,7 @@ title: הוספת אפשרות להעלאת תמונות
 
 **מאמן/ת:** דבר/י מעט על HTML.
 
-<br/><br/>
+%br
+%br
 %h4 תרגיל
 בעמוד של רשימת הרעיונות, עדיין מוצג הנתיב אל התמונה במקום התמונה עצמה. נסי לתקן זאת!
