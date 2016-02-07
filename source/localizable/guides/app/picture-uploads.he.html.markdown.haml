@@ -91,7 +91,7 @@ title: הוספת אפשרות להעלאת תמונות
 
 = preserve do 
   - code("erb") do
-    <%= image_tag(@idea.picture_url, :width => 50) if @idea.picture.present? %>
+    <%= image_tag(@idea.picture_url) if @idea.picture.present? %>
 
 %p כעת רפרפשי את הדפדפן שלך כדי לראות מה השתנה.
 
