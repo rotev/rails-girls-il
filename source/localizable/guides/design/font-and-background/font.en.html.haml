@@ -12,13 +12,9 @@ title: Use a special font
 %p 
   Open the file 
   %code app/views/layouts/application.html.erb
-  and below the line:
-
-= preserve do 
-  - code("erb") do
-    <link href='http://railsgirls.co.il/bootstrap/css/bootstrap-theme.css' rel='stylesheet'>
-
-%p add this line:
+  and somewhere inside the
+  %code &lthead&gt
+  section, add this line:
 
 = preserve do 
   - code("erb") do
