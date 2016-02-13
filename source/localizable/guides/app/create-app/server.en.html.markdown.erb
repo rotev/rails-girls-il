@@ -15,14 +15,14 @@ in your browser. You should see "Welcome aboard" page, which means that the gene
 
 <%=screenshot 'app/app/initial-app.png' %>
 
-Notice that the command prompt is no longer visible in the terminal window because you are now running the Rails server. The command prompt looks like this:
+Notice that the command prompt is no longer visible in the terminal window because you are now running the Rails server. Normally the command prompt looks something like this:
 
 <div class="os-specific">
-  <div class="nix">
-<% code("sh") do %>$<% end %>
+  <div class="nix osx">
+<% code("sh") do %>bash:~ projects/railsgirls$<% end %>
   </div>
-  <div class="win">
-<% code("text") do %>C:\Sites\projects\railsgirls><% end %>
+  <div class="windows">
+<% code("text") do %>C:\projects\railsgirls><% end %>
   </div>
 </div>
 
