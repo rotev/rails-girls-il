@@ -6,15 +6,7 @@ title: Add picture uploads
 
 We need to install a piece of software to let us upload files in Rails.
 
-Open `Gemfile` in the project directory using your text editor and under the line
-
-
-= preserve do 
-  - code("ruby") do
-    gem 'sqlite3'
-
-add
-
+Open `Gemfile` in the project directory using your text editor and add the following line to the list of gems:
 
 = preserve do 
   - code("sh") do
@@ -43,18 +35,13 @@ At this point you need to **start the Rails server process** in the terminal.
 
 This is needed for the app to load the added library.
 
-Open `app/models/idea.rb` and under the line
-
-= preserve do 
-  - code("ruby") do
-    class Idea < ActiveRecord::Base
-
-add
+Open `app/models/idea.rb` and under the first line add
 
 = preserve do 
   - code("ruby") do
     mount_uploader :picture, PictureUploader
 
+%br
 Open `app/views/ideas/_form.html.erb` and change
 
 = preserve do 
@@ -96,8 +83,14 @@ to
 
 = preserve do 
   - code("erb") do
-    <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+    <%= image_tag(@idea.picture_url) if @idea.picture.present? %>
 
 %p Now refresh your browser to see what changed.
 
 **Coach:** Talk a little about HTML.
+
+%br
+%br
+%h4 Exercise
+In the 'ideas list' page, it still shows the path to the picture instead of the picture itself.
+Can you fix it?
