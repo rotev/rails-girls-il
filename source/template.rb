@@ -4,41 +4,33 @@ def generate_controller(update_method, params, include_white_list_code=false)
   controller_code = <<-CODE
 <% if namespaced? -%>
 require_dependency "<%= namespaced_file_path %>/application_controller"
-
 <% end -%>
 <% module_namespacing do -%>
 class <%= controller_class_name %>Controller < ApplicationController
-
   def index
     @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
     render 'index'
   end
-
   def show
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     render 'show'
   end
-
   def new
     @<%= singular_table_name %> = <%= orm_class.build(class_name) %>
     render 'new'
   end
-
   def edit
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     render 'edit'
   end
-
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{params}") %>
-
     if @<%= orm_instance.save %>
       redirect_to @<%= singular_table_name %>, notice: <%= "'\#{human_name} was successfully created.'" %>
     else
       render action: 'new'
     end
   end
-
   def update
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     if @<%= orm_instance.#{update_method}("#{params}") %>
@@ -47,7 +39,6 @@ class <%= controller_class_name %>Controller < ApplicationController
       render action: 'edit'
     end
   end
-
   def destroy
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     @<%= orm_instance.destroy %>
@@ -62,7 +53,6 @@ end
 
 def white_list_code
   <<-CODE
-
   private
   # Only allow a trusted parameter "white list" through.
   def <%= "\#{singular_table_name}_params" %>
@@ -75,10 +65,31 @@ def white_list_code
   CODE
 end
 
+def generate_explicit_routes
+  code = <<-CODE
+class Rails::ExplicitRouteGenerator < Rails::Generators::NamedBase
+  def create_explicit_routes
+    route "delete '/\#{plural_name}/:id'       => '\#{plural_name}\#destroy'\\n"
+    route "put    '/\#{plural_name}/:id'       => '\#{plural_name}\#update'\\n"
+    route "patch  '/\#{plural_name}/:id'       => '\#{plural_name}\#update'"
+    route "get    '/\#{plural_name}/:id/edit'  => '\#{plural_name}\#edit'"
+    route "post   '/\#{plural_name}/:id'       => '\#{plural_name}\#create'\\n"
+    route "get    '/\#{plural_name}/new'       => '\#{plural_name}\#new'"
+    route "get    '/\#{plural_name}/:id'       => '\#{plural_name}\#show'\\n"
+    route "get    '/\#{plural_name}'           => '\#{plural_name}\#index'"
+  end
+end
+  CODE
+  file 'lib/generators/rails/explicit_route/explicit_route_generator.rb', code
+end
+
 environment 'config.generators.assets = false'
 environment 'config.generators.helper = false'
 environment 'config.generators.test_framework = false'
 environment 'config.generators.stylesheets = false'
+environment 'config.generators.resource_route = :explicit_route'
+
+generate_explicit_routes
 
 if Rails::VERSION::MAJOR>3
   environment 'config.generators.jbuilder = false'
