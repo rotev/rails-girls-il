@@ -109,9 +109,9 @@ helpers do
 
   def external_guide_url(guide)
     if I18n.locale == :en
-      "http://guides.railsgirls.com/#{guide}/"
+      "http://guides.railsgirls.com/#{guide}"
     else
-      "http://guides.railsgirls.co.il/#{guide}/"
+      "http://guides.railsgirls.co.il/#{guide}"
     end
   end
 end
