@@ -14,13 +14,13 @@ title: עגלי את התמונות המוקטנות
 
 = preserve do 
   - code("erb") do
-    <td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
+    <td><%= image_tag idea.picture_url if idea.picture? %></td>
 
 %p בשורה:
 
 = preserve do 
   - code("erb") do
-    <td><%= image_tag idea.picture_url(:thumb), class: 'img-circle' if idea.picture? %></td>
+    <td><%= image_tag idea.picture_url, class: 'img-circle' if idea.picture? %></td>
 
 %p
   רפרשי את העמוד ושימי לב שהתמונות המוקטנות קיבלו צורה של עיגול.

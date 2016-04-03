@@ -14,12 +14,12 @@ title: Round the thumbnails
 
 = preserve do 
   - code("erb") do
-    <td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
+    <td><%= image_tag idea.picture_url if idea.picture? %></td>
 
 %p with this:
 
 = preserve do 
   - code("erb") do
-    <td><%= image_tag idea.picture_url(:thumb), class: 'img-circle' if idea.picture? %></td>
+    <td><%= image_tag idea.picture_url, class: 'img-circle' if idea.picture? %></td>
 
-%p Refresh the page and notice that the thumbnails are now shaped like circles.
+%p Refresh the page and notice that the images are now shaped like circles.
