@@ -46,14 +46,14 @@ Open `app/views/ideas/_form.html.erb` and change
 
 = preserve do 
   - code("erb") do
-    <%= f.text_field :picture %>
+    <%= form.text_field :picture, id: :idea_picture %>
 
 to
 
 
 = preserve do 
   - code("erb") do
-    <%= f.file_field :picture %>
+    <%= form.file_field :picture, id: :idea_picture %>
 
 Sometimes, you might get an *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*.
 
@@ -61,13 +61,13 @@ If this happens, in file `app/views/ideas/_form.html.erb` change the line
 
 = preserve do
   - code("erb") do
-    <%= form_for(@idea) do |f| %>
+    <%= form_with(model: idea, local: true) do |form| %>
 
 to
 
 = preserve do
   - code("erb") do
-    <%= form_for @idea, :html => {:multipart => true} do |f| %>
+    <%= form_with(model: idea, local: true, multipart: true) do |form| %>
 
 
 In your browser, add new idea with a picture. When you upload a picture it doesn't look nice because it only shows a path to the file, so let's fix that.
