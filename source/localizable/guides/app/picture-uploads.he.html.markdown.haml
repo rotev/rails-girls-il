@@ -50,14 +50,14 @@ title: הוספת אפשרות להעלאת תמונות
 
 = preserve do 
   - code("erb") do
-    <%= f.text_field :picture %>
+    <%= form.text_field :picture, id: :idea_picture %>
 
 ל- 
 
 
 = preserve do 
   - code("erb") do
-    <%= f.file_field :picture %>
+    <%= form.file_field :picture, id: :idea_picture %>
 
 %br
 לפעמים את יכולה להיתקל בשגיאה הבאה: *TypeError: can't cast ActionDispatch::Http::UploadedFile to string*
@@ -66,13 +66,13 @@ title: הוספת אפשרות להעלאת תמונות
 
 = preserve do
   - code("erb") do
-    <%= form_for(@idea) do |f| %>
+    <%= form_with(model: idea, local: true) do |form| %>
 
 ל-
 
 = preserve do
   - code("erb") do
-    <%= form_for @idea, :html => {:multipart => true} do |f| %>
+    <%= form_with(model: idea, local: true, multipart: true) do |form| %>
 
 %br
 בדפדפן שלך, הוסיפי רעיון חדש עם תמונה. כשאת מעלה תמונה היא לא נראית כל כך טוב כי היא מציגה רק את הנתיב אל קובץ התמונה, אז בואי נתקן זאת.
